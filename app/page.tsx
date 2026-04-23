@@ -5,14 +5,30 @@ const WHATSAPP_URL =
 
 const productos = [
   {
-    nombre: "Vaso Individual",
-    descripcion: "Guarapo fresco recién preparado, perfecto para disfrutar al momento.",
+    nombre: "Guarapo Tradicional",
+    descripcion: "Guarapo fresco recién preparado, perfecto para disfrutar al momento. Puro sabor de caña.",
     precio: "8.000",
     tag: null,
     ilustracion: (
       <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
         <path d="M18 12 L16 52 Q16 56 20 56 L44 56 Q48 56 48 52 L46 12 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
         <path d="M17.5 24 L16.5 50 Q16.5 54.5 20 54.5 L44 54.5 Q47.5 54.5 47.5 50 L46.5 24 Z" fill="#D9A441" opacity="0.5"/>
+        <circle cx="28" cy="38" r="2" fill="#FFF8EE" opacity="0.6"/>
+        <circle cx="36" cy="42" r="1.5" fill="#FFF8EE" opacity="0.5"/>
+      </svg>
+    ),
+  },
+  {
+    nombre: "Guarapo con Limón",
+    descripcion: "Guarapo fresco con un toque cítrico de limón. Refrescante y auténtico.",
+    precio: "12.000",
+    tag: "Nuevo",
+    ilustracion: (
+      <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
+        <path d="M18 12 L16 52 Q16 56 20 56 L44 56 Q48 56 48 52 L46 12 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
+        <path d="M17.5 24 L16.5 50 Q16.5 54.5 20 54.5 L44 54.5 Q47.5 54.5 47.5 50 L46.5 24 Z" fill="#D9A441" opacity="0.5"/>
+        <circle cx="38" cy="10" r="8" fill="#E8D44D" opacity="0.8"/>
+        <circle cx="38" cy="10" r="5.5" fill="#F5EDA6" opacity="0.6"/>
         <circle cx="28" cy="38" r="2" fill="#FFF8EE" opacity="0.6"/>
         <circle cx="36" cy="42" r="1.5" fill="#FFF8EE" opacity="0.5"/>
       </svg>
@@ -49,22 +65,6 @@ const productos = [
       </svg>
     ),
   },
-  {
-    nombre: "Promo Lanzamiento",
-    descripcion: "2 botellas de 500 ml a precio especial. Comparte o guarda para después.",
-    precio: "22.000",
-    tag: "Oferta",
-    ilustracion: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
-        <path d="M10 18 Q10 14 14 14 L26 14 Q30 14 30 18 L30 54 Q30 58 26 58 L14 58 Q10 58 10 54 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="1.5"/>
-        <path d="M11 28 L11 52 Q11 56.5 14.5 56.5 L25.5 56.5 Q29 56.5 29 52 L29 28 Z" fill="#D9A441" opacity="0.5"/>
-        <path d="M34 18 Q34 14 38 14 L50 14 Q54 14 54 18 L54 54 Q54 58 50 58 L38 58 Q34 58 34 54 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="1.5"/>
-        <path d="M35 28 L35 52 Q35 56.5 38.5 56.5 L49.5 56.5 Q53 56.5 53 52 L53 28 Z" fill="#D9A441" opacity="0.5"/>
-        <rect x="12" y="8" width="16" height="5" rx="2" fill="#7A4B2A" opacity="0.5"/>
-        <rect x="36" y="8" width="16" height="5" rx="2" fill="#7A4B2A" opacity="0.5"/>
-      </svg>
-    ),
-  },
 ];
 
 const beneficios = [
@@ -93,7 +93,7 @@ const beneficios = [
 const pasos = [
   { numero: "1", titulo: "Elige tu presentación", descripcion: "Escoge entre vaso, botella o promo. Tenemos opciones para todos los gustos." },
   { numero: "2", titulo: "Confirma tu zona", descripcion: "Valida que tenemos cobertura en tu barrio de Bogotá antes de pedir." },
-  { numero: "3", titulo: "Recibe frío en casa", descripcion: "Preparamos tu guarapo al momento y te lo llevamos frío y sellado a tu puerta." },
+  { numero: "3", titulo: "Recibe fresco en 25–45 min", descripcion: "Preparamos tu guarapo al momento y te lo llevamos frío y sellado a tu puerta." },
 ];
 
 const testimonios = [
@@ -174,8 +174,10 @@ export default function Home() {
         <section className="relative overflow-hidden bg-gradient-to-b from-bg-warm to-bg">
           <div className="max-w-6xl mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center gap-12">
             <div className="flex-1">
-              <div className="inline-block px-4 py-1.5 mb-6 bg-secondary/15 text-secondary text-sm font-semibold rounded-full">
-                Nuevo en Bogotá — Lanzamiento especial
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="inline-block px-4 py-1.5 bg-secondary/15 text-secondary text-sm font-semibold rounded-full">Hecho bajo pedido</span>
+                <span className="inline-block px-4 py-1.5 bg-secondary/15 text-secondary text-sm font-semibold rounded-full">Entrega local rápida</span>
+                <span className="inline-block px-4 py-1.5 bg-secondary/15 text-secondary text-sm font-semibold rounded-full">Sabor tradicional</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-primary leading-tight max-w-4xl">
                 Guarapo fresco hecho al momento y entregado en Bogotá
@@ -286,6 +288,23 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Promo Lanzamiento */}
+        <section className="py-6 bg-primary">
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            <p className="text-white text-lg md:text-xl font-bold">
+              🎉 Promo de lanzamiento: <span className="text-secondary">2 botellas de 500 ml por COP $22.000</span>
+            </p>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-3 px-6 py-2 bg-secondary text-primary font-semibold rounded-full hover:bg-secondary-light transition-colors text-sm"
+            >
+              Pedir promo por WhatsApp
+            </a>
           </div>
         </section>
 
