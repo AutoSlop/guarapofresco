@@ -90,19 +90,19 @@ const beneficios = [
     descripcion: "Guarapo de caña real, sin conservantes ni azúcar añadida. El sabor tradicional que conoces.",
   },
   {
-    icon: "🫗",
-    titulo: "Fresco",
-    descripcion: "Tu guarapo se prepara en el momento, nunca de stock. Frescura real en cada sorbo.",
-  },
-  {
     icon: "⚡",
     titulo: "Hecho al momento",
     descripcion: "Preparamos tu pedido cuando lo confirmas. Sin espera, sin guarapo viejo.",
   },
   {
     icon: "🚚",
-    titulo: "Entrega confiable",
+    titulo: "Entrega rápida",
     descripcion: "Llegamos sellados y fríos a tu puerta en zonas de cobertura en Bogotá.",
+  },
+  {
+    icon: "📱",
+    titulo: "Compra fácil por WhatsApp",
+    descripcion: "Haz tu pedido en minutos por WhatsApp. Sin apps, sin registro, sin complicaciones.",
   },
 ];
 
