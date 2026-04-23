@@ -5,9 +5,10 @@ const WHATSAPP_URL =
 
 const productos = [
   {
-    nombre: "Guarapo Tradicional",
+    nombre: "Vaso Individual",
     descripcion: "Guarapo fresco recién preparado, perfecto para disfrutar al momento. Puro sabor de caña.",
     precio: "8.000",
+    precioLabel: "Desde $8.000 COP",
     tag: null,
     ilustracion: (
       <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
@@ -19,25 +20,10 @@ const productos = [
     ),
   },
   {
-    nombre: "Guarapo con Limón",
-    descripcion: "El mismo guarapo auténtico con un toque cítrico refrescante. Perfecto para días calurosos.",
-    precio: "12.000",
-    tag: "Nuevo",
-    ilustracion: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
-        <path d="M18 12 L16 52 Q16 56 20 56 L44 56 Q48 56 48 52 L46 12 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
-        <path d="M17.5 24 L16.5 50 Q16.5 54.5 20 54.5 L44 54.5 Q47.5 54.5 47.5 50 L46.5 24 Z" fill="#D9A441" opacity="0.5"/>
-        <circle cx="28" cy="38" r="2" fill="#FFF8EE" opacity="0.6"/>
-        <circle cx="36" cy="42" r="1.5" fill="#FFF8EE" opacity="0.5"/>
-        <circle cx="40" cy="8" r="6" fill="#E8D44D" opacity="0.75"/>
-        <circle cx="40" cy="8" r="4" fill="#F5EDA6" opacity="0.55"/>
-      </svg>
-    ),
-  },
-  {
     nombre: "Botella 500 ml",
     descripcion: "Guarapo fresco embotellado, perfecto para llevar y disfrutar en cualquier momento.",
     precio: "12.000",
+    precioLabel: "Desde $12.000 COP",
     tag: "Popular",
     ilustracion: (
       <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
@@ -53,6 +39,7 @@ const productos = [
     nombre: "Botella 1 Litro",
     descripcion: "Ideal para compartir en familia o guardar para todo el día.",
     precio: "20.000",
+    precioLabel: "Desde $20.000 COP",
     tag: null,
     ilustracion: (
       <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
@@ -66,9 +53,10 @@ const productos = [
     ),
   },
   {
-    nombre: "Pack para Reuniones",
-    descripcion: "Combo especial para compartir en oficina, reuniones o eventos pequeños. Consulta opciones.",
+    nombre: "Pack 2 Botellas 500 ml",
+    descripcion: "Promo de lanzamiento: lleva 2 botellas de 500 ml a precio especial.",
     precio: "22.000",
+    precioLabel: "$22.000 COP",
     tag: "Promo",
     ilustracion: (
       <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
@@ -78,6 +66,23 @@ const productos = [
         <rect x="36" y="8" width="14" height="5" rx="2" fill="#7A4B2A" opacity="0.6"/>
         <path d="M34 16 Q34 13 38 13 L48 13 Q52 13 52 16 L52 52 Q52 56 48 56 L38 56 Q34 56 34 52 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
         <path d="M35 26 L35 50 Q35 54.5 38.5 54.5 L47.5 54.5 Q51 54.5 51 50 L51 26 Z" fill="#D9A441" opacity="0.5"/>
+      </svg>
+    ),
+  },
+  {
+    nombre: "Presentación para Reuniones",
+    descripcion: "Combo especial para oficina, reuniones o eventos pequeños. Cotiza tu pedido por WhatsApp.",
+    precio: null,
+    precioLabel: "Cotiza por WhatsApp",
+    tag: null,
+    ilustracion: (
+      <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
+        <path d="M18 12 L16 52 Q16 56 20 56 L44 56 Q48 56 48 52 L46 12 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
+        <path d="M17.5 24 L16.5 50 Q16.5 54.5 20 54.5 L44 54.5 Q47.5 54.5 47.5 50 L46.5 24 Z" fill="#D9A441" opacity="0.5"/>
+        <circle cx="28" cy="38" r="2" fill="#FFF8EE" opacity="0.6"/>
+        <circle cx="36" cy="42" r="1.5" fill="#FFF8EE" opacity="0.5"/>
+        <circle cx="40" cy="8" r="6" fill="#7A4B2A" opacity="0.2"/>
+        <text x="40" y="11" textAnchor="middle" fill="#7A4B2A" fontSize="8" fontWeight="bold">+</text>
       </svg>
     ),
   },
@@ -107,9 +112,9 @@ const beneficios = [
 ];
 
 const pasos = [
-  { numero: "1", titulo: "Eliges tu guarapo", descripcion: "Escoge entre vaso, botella o pack. Hay una presentación para cada ocasión." },
-  { numero: "2", titulo: "Validamos cobertura", descripcion: "Confirmas tu zona en Bogotá y te decimos si llegamos a tu dirección." },
-  { numero: "3", titulo: "Preparamos y entregamos", descripcion: "Hacemos tu guarapo al momento y te lo llevamos fresco y sellado a tu puerta." },
+  { numero: "1", titulo: "Valida cobertura en Bogotá", descripcion: "Confirma tu zona y dirección para asegurar que llegamos a tu puerta." },
+  { numero: "2", titulo: "Hacemos tu guarapo bajo pedido", descripcion: "Preparamos tu guarapo fresco al momento, justo cuando lo confirmas." },
+  { numero: "3", titulo: "Entregamos frío y rápido", descripcion: "Te lo llevamos sellado y frío directo a tu puerta en zonas de cobertura." },
 ];
 
 const testimonios = [
@@ -298,13 +303,12 @@ export default function Home() {
                   <p className="text-text-light text-sm mb-4 flex-1">{p.descripcion}</p>
                   <div className="flex items-end justify-between mt-auto">
                     <div>
-                      <span className="text-2xl font-bold text-primary">
-                        ${p.precio}
+                      <span className="text-lg font-bold text-primary">
+                        {p.precioLabel}
                       </span>
-                      <span className="text-text-light text-sm ml-1">COP</span>
                     </div>
                     <a
-                      href={`https://wa.me/0000000000?text=${encodeURIComponent(`Hola, quiero pedir: ${p.nombre} ($${p.precio} COP)`)}`}
+                      href={`https://wa.me/0000000000?text=${encodeURIComponent(`Hola, quiero pedir: ${p.nombre}${p.precio ? ` ($${p.precio} COP)` : ''}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-colors"
@@ -521,8 +525,11 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               ¿Listo para probar el mejor guarapo de Bogotá?
             </h2>
-            <p className="text-text-light mb-8 max-w-xl mx-auto">
+            <p className="text-text-light mb-4 max-w-xl mx-auto">
               Haz tu pedido ahora por WhatsApp y recibe guarapo fresco directo a tu puerta.
+            </p>
+            <p className="text-secondary font-bold text-lg mb-8">
+              Oferta de lanzamiento: 2 botellas de 500 ml por COP $22.000
             </p>
             <a
               href={WHATSAPP_URL}
