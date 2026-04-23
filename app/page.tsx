@@ -5,15 +5,9 @@ const WHATSAPP_URL =
 
 const productos = [
   {
-    nombre: "Guarapo Tradicional",
-    descripcion: "Vaso de guarapo puro, recién preparado con caña de azúcar seleccionada.",
+    nombre: "Vaso Individual",
+    descripcion: "Guarapo fresco recién preparado, perfecto para disfrutar al momento.",
     precio: "8.000",
-    tag: null,
-  },
-  {
-    nombre: "Guarapo con Limón",
-    descripcion: "Guarapo fresco con un toque cítrico de limón natural.",
-    precio: "9.000",
     tag: null,
   },
   {
@@ -29,7 +23,7 @@ const productos = [
     tag: null,
   },
   {
-    nombre: "Promo 2×500 ml",
+    nombre: "Promo Lanzamiento 2×500 ml",
     descripcion: "Dos botellas de 500 ml a precio especial. Comparte o guarda para después.",
     precio: "22.000",
     tag: "Promo",
@@ -60,10 +54,9 @@ const beneficios = [
 ];
 
 const pasos = [
-  { numero: "1", titulo: "Elige", descripcion: "Escoge tu guarapo favorito del catálogo." },
-  { numero: "2", titulo: "Confirma cobertura", descripcion: "Verifica que llegamos a tu barrio." },
-  { numero: "3", titulo: "Pide por WhatsApp", descripcion: "Envíanos tu pedido y te confirmamos." },
-  { numero: "4", titulo: "Recibe frío", descripcion: "Te lo llevamos fresco y listo para disfrutar." },
+  { numero: "1", titulo: "Eliges", descripcion: "Escoge tu guarapo favorito del catálogo." },
+  { numero: "2", titulo: "Confirmas cobertura", descripcion: "Verifica que llegamos a tu barrio en Bogotá." },
+  { numero: "3", titulo: "Preparamos y entregamos", descripcion: "Lo preparamos al momento y te lo llevamos rápido, fresco y listo." },
 ];
 
 const testimonios = [
@@ -122,10 +115,10 @@ export default function Home() {
             Guarapo<span className="text-secondary">Fresco</span>
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-text-light">
-            <a href="#beneficios" className="hover:text-primary transition-colors">Beneficios</a>
-            <a href="#catalogo" className="hover:text-primary transition-colors">Catálogo</a>
-            <a href="#cobertura" className="hover:text-primary transition-colors">Cobertura</a>
+            <a href="#productos" className="hover:text-primary transition-colors">Productos</a>
             <a href="#como-funciona" className="hover:text-primary transition-colors">Cómo funciona</a>
+            <a href="#cobertura" className="hover:text-primary transition-colors">Cobertura</a>
+            <a href="#confianza" className="hover:text-primary transition-colors">Confianza</a>
             <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
           </nav>
           <a
@@ -162,10 +155,12 @@ export default function Home() {
                 Pide tu guarapo hoy
               </a>
               <a
-                href="#cobertura"
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 border-2 border-primary text-primary text-lg font-semibold rounded-full hover:bg-primary hover:text-white transition-colors"
               >
-                Ver cobertura
+                Escríbenos por WhatsApp
               </a>
             </div>
           </div>
@@ -198,7 +193,7 @@ export default function Home() {
         </section>
 
         {/* Catálogo */}
-        <section id="catalogo" className="py-20 bg-bg-warm">
+        <section id="productos" className="py-20 bg-bg-warm">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-4">
               Nuestro Catálogo
@@ -206,7 +201,7 @@ export default function Home() {
             <p className="text-center text-text-light mb-12 max-w-xl mx-auto">
               Guarapo fresco de caña, sin conservantes, sin azúcar añadida. Escoge tu favorito.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {productos.map((p) => (
                 <div
                   key={p.nombre}
@@ -241,44 +236,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Promo de lanzamiento */}
-        <section className="py-16">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="bg-gradient-to-r from-primary to-primary-dark rounded-3xl p-8 md:p-12 text-center text-white">
-              <div className="inline-block px-4 py-1.5 mb-4 bg-white/20 text-white text-sm font-semibold rounded-full">
-                Oferta de lanzamiento
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                Promo especial: 2 botellas de 500 ml por $22.000 COP
-              </h2>
-              <p className="text-white/80 mb-6 max-w-xl mx-auto">
-                Ahorra $2.000 en tu primer pedido. Comparte con un amigo o guarda para después. Disponible por tiempo limitado.
-              </p>
-              <a
-                href={`https://wa.me/0000000000?text=${encodeURIComponent("Hola, quiero la promo de 2 botellas de 500 ml por $22.000")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-8 py-4 bg-secondary text-text font-bold rounded-full hover:bg-secondary-light transition-colors shadow-lg"
-              >
-                Aprovechar promo
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Cobertura */}
-        <section id="cobertura" className="py-20 bg-bg-warm">
-          <div className="max-w-6xl mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              ¿Llegamos a tu barrio?
-            </h2>
-            <p className="text-text-light mb-10 max-w-xl mx-auto">
-              Verifica si tu zona en Bogotá está dentro de nuestra cobertura de entrega.
-            </p>
-            <CoverageChecker />
-          </div>
-        </section>
-
         {/* Cómo funciona */}
         <section id="como-funciona" className="py-20">
           <div className="max-w-6xl mx-auto px-4">
@@ -286,9 +243,9 @@ export default function Home() {
               ¿Cómo funciona?
             </h2>
             <p className="text-center text-text-light mb-12 max-w-xl mx-auto">
-              Pedir tu guarapo fresco es muy sencillo. Solo 4 pasos.
+              Pedir tu guarapo fresco es muy sencillo. Solo 3 pasos.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {pasos.map((p) => (
                 <div key={p.numero} className="text-center">
                   <div className="w-14 h-14 bg-primary text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-4">
@@ -302,8 +259,31 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Cobertura */}
+        <section id="cobertura" className="py-20 bg-bg-warm">
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              ¿Llegamos a tu barrio?
+            </h2>
+            <p className="text-text-light mb-8 max-w-xl mx-auto">
+              Nuestros barrios foco de entrega en Bogotá:
+            </p>
+            <div className="flex flex-wrap justify-center gap-3 mb-8 max-w-2xl mx-auto">
+              {["Chapinero", "Teusaquillo", "Parkway", "Quinta Camacho", "Usaquén", "Cedritos"].map((barrio) => (
+                <span key={barrio} className="px-4 py-2 bg-white border border-primary/10 rounded-full text-primary font-semibold text-sm">
+                  {barrio}
+                </span>
+              ))}
+            </div>
+            <p className="text-text-light text-sm mb-8">
+              Valida tu cobertura antes de hacer tu pedido:
+            </p>
+            <CoverageChecker />
+          </div>
+        </section>
+
         {/* Confianza y Conservación */}
-        <section className="py-20 bg-bg-warm">
+        <section id="confianza" className="py-20">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
               Calidad y frescura garantizadas
@@ -355,8 +335,37 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Testimonios */}
+        {/* Ocasión de consumo */}
         <section className="py-20">
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Para cada momento
+            </h2>
+            <p className="text-text-light mb-12 max-w-xl mx-auto">
+              Guarapo fresco ideal para cualquier ocasión.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-primary/5">
+                <div className="text-4xl mb-4">🏠</div>
+                <h3 className="text-lg font-bold text-primary mb-2">En casa</h3>
+                <p className="text-text-light text-sm">Disfruta un guarapo fresco y natural sin salir de tu hogar.</p>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-primary/5">
+                <div className="text-4xl mb-4">💼</div>
+                <h3 className="text-lg font-bold text-primary mb-2">En la oficina</h3>
+                <p className="text-text-light text-sm">Una bebida auténtica para recargar energía durante tu jornada.</p>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-sm border border-primary/5">
+                <div className="text-4xl mb-4">🤝</div>
+                <h3 className="text-lg font-bold text-primary mb-2">Reuniones pequeñas</h3>
+                <p className="text-text-light text-sm">Sorprende a tus invitados con una bebida tradicional y diferente.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonios */}
+        <section className="py-20 bg-bg-warm">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
               Lo que dicen nuestros clientes
@@ -444,15 +453,20 @@ export default function Home() {
               <p className="text-sm mt-1">Guarapo auténtico, hecho al momento en Bogotá.</p>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-4 text-sm">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                WhatsApp: Pide aquí
+              </a>
+              <span className="hidden sm:inline">·</span>
               <a href="mailto:info@example.com" className="hover:text-white transition-colors">
                 info@example.com
               </a>
               <span className="hidden sm:inline">·</span>
-              <a href="tel:+000000000000" className="hover:text-white transition-colors">
-                +00 000 000 0000
-              </a>
-              <span className="hidden sm:inline">·</span>
-              <span>123 Main Street, Bogotá, Colombia</span>
+              <span>Entrega local en Bogotá, Colombia</span>
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-white/10 text-center text-xs text-white/50">
