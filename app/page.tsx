@@ -91,9 +91,9 @@ const beneficios = [
 ];
 
 const pasos = [
-  { numero: "1", titulo: "Elige tu presentación", descripcion: "Escoge entre vaso, botella o promo. Tenemos opciones para todos los gustos." },
-  { numero: "2", titulo: "Confirma tu zona", descripcion: "Valida que tenemos cobertura en tu barrio de Bogotá antes de pedir." },
-  { numero: "3", titulo: "Recibe fresco en 25–45 min", descripcion: "Preparamos tu guarapo al momento y te lo llevamos frío y sellado a tu puerta." },
+  { numero: "1", titulo: "Pide tu guarapo", descripcion: "Elige tu presentación favorita y haz tu pedido por WhatsApp en segundos." },
+  { numero: "2", titulo: "Preparamos al momento", descripcion: "Tu guarapo se hace fresco cuando lo pides. Sin stock, sin esperas innecesarias." },
+  { numero: "3", titulo: "Entregamos frío", descripcion: "Te lo llevamos sellado y frío a tu puerta en 25–45 min en zonas con cobertura." },
 ];
 
 const testimonios = [
@@ -349,7 +349,7 @@ export default function Home() {
               Entrega en zonas seleccionadas de Bogotá
             </h2>
             <p className="text-text-light mb-8 max-w-xl mx-auto">
-              Confirma tu cobertura por WhatsApp antes de pagar. Estas son algunas de nuestras zonas de entrega:
+              Cobertura limitada a zonas seleccionadas. Entrega estimada de 25–45 min en zona principal. Confirma tu cobertura por WhatsApp antes de pagar.
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-8 max-w-2xl mx-auto">
               {["Chapinero", "Teusaquillo", "Parkway", "Quinta Camacho", "Usaquén", "Cedritos"].map((barrio) => (
@@ -547,7 +547,9 @@ export default function Home() {
               >
                 WhatsApp: Pide aquí
               </a>
-              <span>Bogotá, Colombia</span>
+              <a href="mailto:info@example.com" className="hover:text-white transition-colors">info@example.com</a>
+              <span>Tel: +00 000 000 0000</span>
+              <span>123 Main Street, Bogotá, Colombia</span>
               <p className="text-white/60 text-xs mt-1">Pedidos y atención local por WhatsApp.</p>
               <div className="flex gap-4 mt-2">
                 <a href="#" className="hover:text-white transition-colors">Instagram</a>
