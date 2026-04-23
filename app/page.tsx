@@ -5,10 +5,16 @@ const WHATSAPP_URL =
 
 const productos = [
   {
-    nombre: "Vaso Individual",
+    nombre: "Guarapo Tradicional",
     descripcion: "Guarapo fresco recién preparado, perfecto para disfrutar al momento.",
     precio: "8.000",
     tag: null,
+  },
+  {
+    nombre: "Guarapo con Limón",
+    descripcion: "El clásico guarapo con un toque cítrico refrescante. Ideal para días calurosos.",
+    precio: "12.000",
+    tag: "Nuevo",
   },
   {
     nombre: "Botella 500 ml",
@@ -21,12 +27,6 @@ const productos = [
     descripcion: "Ideal para compartir en familia o guardar para todo el día.",
     precio: "20.000",
     tag: null,
-  },
-  {
-    nombre: "Promo Lanzamiento 2×500 ml",
-    descripcion: "Dos botellas de 500 ml a precio especial. Comparte o guarda para después.",
-    precio: "22.000",
-    tag: "Promo",
   },
 ];
 
@@ -99,9 +99,9 @@ const faqs = [
       "Mantén tu guarapo refrigerado y consúmelo preferiblemente el mismo día de la entrega para disfrutar su máximo sabor y frescura. Una vez abierto, consume dentro de las siguientes 4 horas.",
   },
   {
-    pregunta: "¿El guarapo tiene aditivos o conservantes?",
+    pregunta: "¿Puedo hacer pedidos para reuniones o eventos?",
     respuesta:
-      "No. Nuestro guarapo es 100% natural, hecho con caña de azúcar seleccionada. No usamos conservantes, colorantes ni azúcar añadida.",
+      "¡Claro! Hacemos pedidos especiales para reuniones, oficinas y eventos pequeños. Escríbenos por WhatsApp con la cantidad de personas y te armamos un combo a medida.",
   },
 ];
 
@@ -135,17 +135,17 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero */}
         <section className="relative overflow-hidden bg-gradient-to-b from-bg-warm to-bg">
-          <div className="max-w-6xl mx-auto px-4 py-20 md:py-32 text-center">
+          <div className="max-w-6xl mx-auto px-4 py-20 md:py-32">
             <div className="inline-block px-4 py-1.5 mb-6 bg-secondary/15 text-secondary text-sm font-semibold rounded-full">
               Nuevo en Bogotá — Lanzamiento especial
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-primary leading-tight max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold text-primary leading-tight max-w-4xl">
               Guarapo fresco hecho al momento y entregado en Bogotá
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-text-light max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-6 text-lg md:text-xl text-text-light max-w-2xl leading-relaxed">
               Pide tu guarapo auténtico, recién preparado y con entrega local rápida. Sin filas, sin improvisación y con sabor tradicional de verdad.
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
@@ -227,11 +227,36 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-colors"
                     >
-                      Pedir
+                      Pedir por WhatsApp
                     </a>
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Promo Lanzamiento */}
+        <section className="py-12">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="bg-secondary/15 border border-secondary/30 rounded-2xl p-8 text-center">
+              <span className="inline-block px-3 py-1 bg-secondary text-white text-xs font-bold rounded-full mb-4">
+                Promo Lanzamiento
+              </span>
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-2">
+                2 botellas de 500 ml por COP $22.000
+              </h3>
+              <p className="text-text-light mb-6">
+                Comparte o guarda para después. Precio especial por tiempo limitado.
+              </p>
+              <a
+                href={`https://wa.me/0000000000?text=${encodeURIComponent("Hola, quiero pedir la promo: 2 botellas de 500 ml por $22.000 COP")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition-colors"
+              >
+                Pedir promo por WhatsApp
+              </a>
             </div>
           </div>
         </section>
