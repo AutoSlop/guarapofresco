@@ -5,7 +5,7 @@ const WHATSAPP_URL =
 
 const productos = [
   {
-    nombre: "Guarapo Tradicional",
+    nombre: "Vaso Individual",
     descripcion: "Guarapo fresco recién preparado, perfecto para disfrutar al momento. Puro sabor de caña.",
     precio: "8.000",
     tag: null,
@@ -19,18 +19,18 @@ const productos = [
     ),
   },
   {
-    nombre: "Guarapo con Limón",
-    descripcion: "Guarapo fresco con un toque cítrico de limón. Refrescante y auténtico.",
-    precio: "12.000",
-    tag: "Nuevo",
+    nombre: "Promo Lanzamiento",
+    descripcion: "2 botellas de 500 ml de guarapo fresco. Ideal para compartir o guardar para después.",
+    precio: "22.000",
+    tag: "Promo",
     ilustracion: (
       <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
-        <path d="M18 12 L16 52 Q16 56 20 56 L44 56 Q48 56 48 52 L46 12 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
-        <path d="M17.5 24 L16.5 50 Q16.5 54.5 20 54.5 L44 54.5 Q47.5 54.5 47.5 50 L46.5 24 Z" fill="#D9A441" opacity="0.5"/>
-        <circle cx="38" cy="10" r="8" fill="#E8D44D" opacity="0.8"/>
-        <circle cx="38" cy="10" r="5.5" fill="#F5EDA6" opacity="0.6"/>
-        <circle cx="28" cy="38" r="2" fill="#FFF8EE" opacity="0.6"/>
-        <circle cx="36" cy="42" r="1.5" fill="#FFF8EE" opacity="0.5"/>
+        <rect x="14" y="8" width="14" height="5" rx="2" fill="#7A4B2A" opacity="0.6"/>
+        <path d="M12 16 Q12 13 16 13 L26 13 Q30 13 30 16 L30 52 Q30 56 26 56 L16 56 Q12 56 12 52 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
+        <path d="M13 26 L13 50 Q13 54.5 16.5 54.5 L25.5 54.5 Q29 54.5 29 50 L29 26 Z" fill="#D9A441" opacity="0.5"/>
+        <rect x="36" y="8" width="14" height="5" rx="2" fill="#7A4B2A" opacity="0.6"/>
+        <path d="M34 16 Q34 13 38 13 L48 13 Q52 13 52 16 L52 52 Q52 56 48 56 L38 56 Q34 56 34 52 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
+        <path d="M35 26 L35 50 Q35 54.5 38.5 54.5 L47.5 54.5 Q51 54.5 51 50 L51 26 Z" fill="#D9A441" opacity="0.5"/>
       </svg>
     ),
   },
@@ -85,8 +85,8 @@ const beneficios = [
   },
   {
     icon: "✨",
-    titulo: "Sabor auténtico y fresco",
-    descripcion: "Caña de azúcar 100% natural, sin conservantes ni azúcar añadida. Sabor tradicional de verdad.",
+    titulo: "Compra fácil por WhatsApp",
+    descripcion: "Haz tu pedido en segundos por WhatsApp. Sin apps, sin registros. Simple, directo y rápido.",
   },
 ];
 
@@ -164,7 +164,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="px-5 py-2 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-colors"
           >
-            Pedir ahora
+            Pedir por WhatsApp
           </a>
         </div>
       </header>
@@ -195,50 +195,61 @@ export default function Home() {
                   Pide tu guarapo hoy
                 </a>
                 <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#productos"
                   className="px-8 py-4 border-2 border-primary text-primary text-lg font-semibold rounded-full hover:bg-primary hover:text-white transition-colors"
                 >
-                  Escríbenos por WhatsApp
+                  Ver productos
                 </a>
               </div>
             </div>
             {/* Ilustración decorativa de caña y guarapo */}
             <div className="hidden md:flex flex-shrink-0 items-center justify-center w-72 h-72 lg:w-80 lg:h-80">
               <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-lg">
-                {/* Vaso */}
-                <path d="M120 100 L110 260 Q110 280 130 280 L190 280 Q210 280 210 260 L200 100 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="3"/>
-                {/* Guarapo en el vaso */}
-                <path d="M118 140 L112 255 Q112 275 130 275 L190 275 Q208 275 208 255 L202 140 Z" fill="#D9A441" opacity="0.6"/>
-                <path d="M118 140 L202 140" stroke="#D9A441" strokeWidth="2" opacity="0.8"/>
-                {/* Burbujas */}
-                <circle cx="145" cy="200" r="4" fill="#FFF8EE" opacity="0.6"/>
-                <circle cx="170" cy="220" r="3" fill="#FFF8EE" opacity="0.5"/>
-                <circle cx="155" cy="180" r="3.5" fill="#FFF8EE" opacity="0.5"/>
-                <circle cx="180" cy="195" r="2.5" fill="#FFF8EE" opacity="0.4"/>
-                {/* Cañas de azúcar */}
-                <rect x="60" y="40" width="12" height="220" rx="6" fill="#7A4B2A" opacity="0.7"/>
-                <rect x="60" y="80" width="12" height="3" fill="#5E3A20" opacity="0.5"/>
-                <rect x="60" y="130" width="12" height="3" fill="#5E3A20" opacity="0.5"/>
-                <rect x="60" y="180" width="12" height="3" fill="#5E3A20" opacity="0.5"/>
-                {/* Hojas de caña */}
-                <path d="M72 50 Q95 30 90 60 Q85 45 72 50" fill="#6B8E4E" opacity="0.7"/>
-                <path d="M60 65 Q35 45 40 75 Q45 60 60 65" fill="#6B8E4E" opacity="0.6"/>
-                <path d="M72 40 Q100 20 95 55" stroke="#6B8E4E" strokeWidth="1.5" fill="none" opacity="0.5"/>
-                {/* Segunda caña */}
-                <rect x="245" y="60" width="10" height="200" rx="5" fill="#7A4B2A" opacity="0.5"/>
-                <rect x="245" y="100" width="10" height="3" fill="#5E3A20" opacity="0.4"/>
-                <rect x="245" y="150" width="10" height="3" fill="#5E3A20" opacity="0.4"/>
-                <path d="M255 70 Q280 50 275 80 Q270 65 255 70" fill="#6B8E4E" opacity="0.5"/>
-                {/* Rodaja de limón */}
-                <circle cx="225" cy="120" r="22" fill="#E8D44D" opacity="0.8"/>
-                <circle cx="225" cy="120" r="16" fill="#F5EDA6" opacity="0.6"/>
-                <line x1="225" y1="104" x2="225" y2="136" stroke="#E8D44D" strokeWidth="1" opacity="0.5"/>
-                <line x1="209" y1="120" x2="241" y2="120" stroke="#E8D44D" strokeWidth="1" opacity="0.5"/>
+                {/* Botella grande (izquierda) */}
+                <rect x="68" y="52" width="28" height="10" rx="3" fill="#7A4B2A" opacity="0.7"/>
+                <path d="M60 68 Q60 62 70 62 L94 62 Q104 62 104 68 L104 260 Q104 272 94 272 L70 272 Q60 272 60 260 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2.5"/>
+                <path d="M63 110 L63 256 Q63 268 72 268 L92 268 Q101 268 101 256 L101 110 Z" fill="#D9A441" opacity="0.55"/>
+                <circle cx="78" cy="180" r="3" fill="#FFF8EE" opacity="0.5"/>
+                <circle cx="88" cy="210" r="2" fill="#FFF8EE" opacity="0.4"/>
+                <circle cx="74" cy="230" r="2.5" fill="#FFF8EE" opacity="0.45"/>
+                {/* Etiqueta botella */}
+                <rect x="65" y="150" width="34" height="40" rx="4" fill="#7A4B2A" opacity="0.12"/>
+                <text x="82" y="174" textAnchor="middle" fill="#7A4B2A" fontSize="8" fontWeight="bold" opacity="0.5">GF</text>
+
+                {/* Vaso (centro) */}
+                <path d="M140 100 L132 262 Q132 278 146 278 L198 278 Q212 278 212 262 L204 100 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2.5"/>
+                <path d="M139 140 L134 258 Q134 274 146 274 L198 274 Q210 274 210 258 L205 140 Z" fill="#D9A441" opacity="0.55"/>
+                <path d="M139 140 L205 140" stroke="#D9A441" strokeWidth="2" opacity="0.7"/>
+                {/* Burbujas vaso */}
+                <circle cx="158" cy="200" r="4" fill="#FFF8EE" opacity="0.5"/>
+                <circle cx="180" cy="225" r="3" fill="#FFF8EE" opacity="0.45"/>
+                <circle cx="168" cy="180" r="3" fill="#FFF8EE" opacity="0.4"/>
+                <circle cx="190" cy="195" r="2.5" fill="#FFF8EE" opacity="0.35"/>
+
+                {/* Botella pequeña (derecha) */}
+                <rect x="232" y="90" width="22" height="8" rx="3" fill="#7A4B2A" opacity="0.7"/>
+                <path d="M226 104 Q226 98 234 98 L256 98 Q264 98 264 104 L264 264 Q264 274 256 274 L234 274 Q226 274 226 264 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2.5"/>
+                <path d="M229 140 L229 260 Q229 270 236 270 L254 270 Q261 270 261 260 L261 140 Z" fill="#D9A441" opacity="0.55"/>
+                <circle cx="242" cy="200" r="2" fill="#FFF8EE" opacity="0.45"/>
+                <circle cx="250" cy="230" r="1.5" fill="#FFF8EE" opacity="0.4"/>
+                {/* Etiqueta botella pequeña */}
+                <rect x="231" y="170" width="28" height="32" rx="3" fill="#7A4B2A" opacity="0.12"/>
+                <text x="245" y="190" textAnchor="middle" fill="#7A4B2A" fontSize="7" fontWeight="bold" opacity="0.5">GF</text>
+
+                {/* Rodaja de limón decorativa */}
+                <circle cx="125" cy="88" r="18" fill="#E8D44D" opacity="0.75"/>
+                <circle cx="125" cy="88" r="12" fill="#F5EDA6" opacity="0.55"/>
+                <line x1="125" y1="76" x2="125" y2="100" stroke="#E8D44D" strokeWidth="1" opacity="0.4"/>
+                <line x1="113" y1="88" x2="137" y2="88" stroke="#E8D44D" strokeWidth="1" opacity="0.4"/>
+
+                {/* Hoja de caña decorativa */}
+                <path d="M50 40 Q30 20 35 55 Q40 35 50 40" fill="#6B8E4E" opacity="0.6"/>
+                <path d="M270 60 Q290 40 285 75 Q280 55 270 60" fill="#6B8E4E" opacity="0.5"/>
+
                 {/* Gotitas frescas */}
-                <path d="M130 90 Q132 82 134 90 Q132 94 130 90" fill="#87CEEB" opacity="0.5"/>
-                <path d="M185 95 Q187 87 189 95 Q187 99 185 95" fill="#87CEEB" opacity="0.4"/>
+                <path d="M148 90 Q150 82 152 90 Q150 94 148 90" fill="#87CEEB" opacity="0.5"/>
+                <path d="M198 92 Q200 84 202 92 Q200 96 198 92" fill="#87CEEB" opacity="0.4"/>
+                <path d="M108 80 Q110 72 112 80 Q110 84 108 80" fill="#87CEEB" opacity="0.35"/>
               </svg>
             </div>
           </div>
@@ -282,7 +293,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-colors"
                     >
-                      Pedir ahora
+                      Pedir por WhatsApp
                     </a>
                   </div>
                 </div>
@@ -518,7 +529,7 @@ export default function Home() {
                 Guarapo<span className="text-secondary">Fresco</span>
               </span>
               <p className="text-sm mt-1">Guarapo auténtico, hecho al momento en Bogotá.</p>
-              <p className="text-sm mt-2 text-white/60">Frescura real de la caña, directo a tu puerta.</p>
+              <p className="text-sm mt-2 text-white/60">La bebida tradicional de la caña, modernizada para ti en Bogotá.</p>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
