@@ -9,60 +9,91 @@ const productos = [
     descripcion: "Guarapo fresco recién preparado, perfecto para disfrutar al momento.",
     precio: "8.000",
     tag: null,
-  },
-  {
-    nombre: "Guarapo con Limón",
-    descripcion: "Guarapo fresco con un toque cítrico de limón natural. Refrescante y auténtico.",
-    precio: "9.000",
-    tag: "Nuevo",
+    ilustracion: (
+      <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
+        <path d="M18 12 L16 52 Q16 56 20 56 L44 56 Q48 56 48 52 L46 12 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
+        <path d="M17.5 24 L16.5 50 Q16.5 54.5 20 54.5 L44 54.5 Q47.5 54.5 47.5 50 L46.5 24 Z" fill="#D9A441" opacity="0.5"/>
+        <circle cx="28" cy="38" r="2" fill="#FFF8EE" opacity="0.6"/>
+        <circle cx="36" cy="42" r="1.5" fill="#FFF8EE" opacity="0.5"/>
+      </svg>
+    ),
   },
   {
     nombre: "Botella 500 ml",
     descripcion: "Guarapo fresco embotellado, perfecto para llevar y disfrutar en cualquier momento.",
     precio: "12.000",
     tag: "Popular",
+    ilustracion: (
+      <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
+        <rect x="24" y="8" width="16" height="6" rx="2" fill="#7A4B2A" opacity="0.6"/>
+        <path d="M22 18 Q22 14 26 14 L38 14 Q42 14 42 18 L42 54 Q42 58 38 58 L26 58 Q22 58 22 54 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
+        <path d="M23 28 L23 52 Q23 56.5 26.5 56.5 L37.5 56.5 Q41 56.5 41 52 L41 28 Z" fill="#D9A441" opacity="0.5"/>
+        <circle cx="30" cy="40" r="1.5" fill="#FFF8EE" opacity="0.5"/>
+        <circle cx="34" cy="46" r="1" fill="#FFF8EE" opacity="0.4"/>
+      </svg>
+    ),
   },
   {
     nombre: "Botella 1 Litro",
     descripcion: "Ideal para compartir en familia o guardar para todo el día.",
     precio: "20.000",
     tag: null,
+    ilustracion: (
+      <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
+        <rect x="22" y="4" width="20" height="7" rx="2" fill="#7A4B2A" opacity="0.6"/>
+        <path d="M18 16 Q18 11 24 11 L40 11 Q46 11 46 16 L46 56 Q46 60 40 60 L24 60 Q18 60 18 56 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
+        <path d="M19.5 26 L19.5 54 Q19.5 58.5 24 58.5 L40 58.5 Q44.5 58.5 44.5 54 L44.5 26 Z" fill="#D9A441" opacity="0.5"/>
+        <circle cx="28" cy="40" r="2" fill="#FFF8EE" opacity="0.5"/>
+        <circle cx="36" cy="48" r="1.5" fill="#FFF8EE" opacity="0.4"/>
+        <circle cx="32" cy="36" r="1" fill="#FFF8EE" opacity="0.5"/>
+      </svg>
+    ),
   },
   {
-    nombre: "Pack para Reuniones",
-    descripcion: "Combo ideal para oficinas, reuniones o eventos pequeños. Consulta cantidades por WhatsApp.",
-    precio: "20.000",
-    tag: "Grupos",
+    nombre: "Promo Lanzamiento",
+    descripcion: "2 botellas de 500 ml a precio especial. Comparte o guarda para después.",
+    precio: "22.000",
+    tag: "Oferta",
+    ilustracion: (
+      <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
+        <path d="M10 18 Q10 14 14 14 L26 14 Q30 14 30 18 L30 54 Q30 58 26 58 L14 58 Q10 58 10 54 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="1.5"/>
+        <path d="M11 28 L11 52 Q11 56.5 14.5 56.5 L25.5 56.5 Q29 56.5 29 52 L29 28 Z" fill="#D9A441" opacity="0.5"/>
+        <path d="M34 18 Q34 14 38 14 L50 14 Q54 14 54 18 L54 54 Q54 58 50 58 L38 58 Q34 58 34 54 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="1.5"/>
+        <path d="M35 28 L35 52 Q35 56.5 38.5 56.5 L49.5 56.5 Q53 56.5 53 52 L53 28 Z" fill="#D9A441" opacity="0.5"/>
+        <rect x="12" y="8" width="16" height="5" rx="2" fill="#7A4B2A" opacity="0.5"/>
+        <rect x="36" y="8" width="16" height="5" rx="2" fill="#7A4B2A" opacity="0.5"/>
+      </svg>
+    ),
   },
 ];
 
 const beneficios = [
   {
-    icon: "✨",
-    titulo: "Auténtico",
-    descripcion: "Guarapo de caña 100% natural, sin aditivos ni conservantes. Sabor tradicional de verdad.",
-  },
-  {
     icon: "🫗",
-    titulo: "Fresco",
-    descripcion: "Preparado bajo pedido para que siempre lo recibas recién hecho y con todo su sabor.",
-  },
-  {
-    icon: "🤝",
-    titulo: "Confiable",
-    descripcion: "Proceso higiénico, empaque sellado y cadena de frío desde la preparación hasta tu puerta.",
+    titulo: "Hecho bajo pedido",
+    descripcion: "Tu guarapo se prepara en el momento, nunca de stock. Frescura real en cada sorbo.",
   },
   {
     icon: "🚀",
-    titulo: "Entrega local rápida",
-    descripcion: "Recibe tu pedido el mismo día en las zonas con cobertura en Bogotá.",
+    titulo: "Entrega rápida en Bogotá",
+    descripcion: "Llegamos el mismo día a zonas seleccionadas de Bogotá. Sin demoras innecesarias.",
+  },
+  {
+    icon: "📦",
+    titulo: "Empaque limpio y seguro",
+    descripcion: "Envases sellados con cadena de frío. Tu guarapo llega en perfectas condiciones.",
+  },
+  {
+    icon: "✨",
+    titulo: "Sabor auténtico y fresco",
+    descripcion: "Caña de azúcar 100% natural, sin conservantes ni azúcar añadida. Sabor tradicional de verdad.",
   },
 ];
 
 const pasos = [
-  { numero: "1", titulo: "Elige tu presentación", descripcion: "Escoge entre vaso, botella o pack. Tenemos opciones para todos los gustos." },
-  { numero: "2", titulo: "Validamos cobertura", descripcion: "Confirma que llegamos a tu barrio en Bogotá antes de hacer tu pedido." },
-  { numero: "3", titulo: "Preparamos y entregamos", descripcion: "Tu guarapo se prepara al momento y te lo llevamos frío y rápido a tu puerta." },
+  { numero: "1", titulo: "Elige tu presentación", descripcion: "Escoge entre vaso, botella o promo. Tenemos opciones para todos los gustos." },
+  { numero: "2", titulo: "Confirma tu zona", descripcion: "Valida que tenemos cobertura en tu barrio de Bogotá antes de pedir." },
+  { numero: "3", titulo: "Recibe frío en casa", descripcion: "Preparamos tu guarapo al momento y te lo llevamos frío y sellado a tu puerta." },
 ];
 
 const testimonios = [
@@ -122,7 +153,7 @@ export default function Home() {
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-text-light">
             <a href="#productos" className="hover:text-primary transition-colors">Productos</a>
-            <a href="#como-funciona" className="hover:text-primary transition-colors">Cómo funciona</a>
+            <a href="#como-funciona" className="hover:text-primary transition-colors">Cómo pedir</a>
             <a href="#cobertura" className="hover:text-primary transition-colors">Cobertura</a>
             <a href="#confianza" className="hover:text-primary transition-colors">Conservación</a>
             <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
@@ -141,59 +172,76 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero */}
         <section className="relative overflow-hidden bg-gradient-to-b from-bg-warm to-bg">
-          <div className="max-w-6xl mx-auto px-4 py-20 md:py-32">
-            <div className="inline-block px-4 py-1.5 mb-6 bg-secondary/15 text-secondary text-sm font-semibold rounded-full">
-              Nuevo en Bogotá — Lanzamiento especial
+          <div className="max-w-6xl mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center gap-12">
+            <div className="flex-1">
+              <div className="inline-block px-4 py-1.5 mb-6 bg-secondary/15 text-secondary text-sm font-semibold rounded-full">
+                Nuevo en Bogotá — Lanzamiento especial
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-primary leading-tight max-w-4xl">
+                Guarapo fresco hecho al momento y entregado en Bogotá
+              </h1>
+              <p className="mt-6 text-lg md:text-xl text-text-light max-w-2xl leading-relaxed">
+                Pide tu guarapo auténtico, recién preparado y con entrega local rápida. Sin filas, sin improvisación y con sabor tradicional de verdad.
+              </p>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 bg-primary text-white text-lg font-semibold rounded-full hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20"
+                >
+                  Pide tu guarapo hoy
+                </a>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 border-2 border-primary text-primary text-lg font-semibold rounded-full hover:bg-primary hover:text-white transition-colors"
+                >
+                  Escríbenos por WhatsApp
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-primary leading-tight max-w-4xl">
-              Guarapo fresco hecho al momento y entregado en Bogotá
-            </h1>
-            <p className="mt-6 text-lg md:text-xl text-text-light max-w-2xl leading-relaxed">
-              Pide tu guarapo auténtico, recién preparado y con entrega local rápida. Sin filas, sin improvisación y con sabor tradicional de verdad.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-4 bg-primary text-white text-lg font-semibold rounded-full hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20"
-              >
-                Pide tu guarapo hoy
-              </a>
-              <a
-                href="#productos"
-                className="px-8 py-4 border-2 border-primary text-primary text-lg font-semibold rounded-full hover:bg-primary hover:text-white transition-colors"
-              >
-                Ver productos
-              </a>
+            {/* Ilustración decorativa de caña y guarapo */}
+            <div className="hidden md:flex flex-shrink-0 items-center justify-center w-72 h-72 lg:w-80 lg:h-80">
+              <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-lg">
+                {/* Vaso */}
+                <path d="M120 100 L110 260 Q110 280 130 280 L190 280 Q210 280 210 260 L200 100 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="3"/>
+                {/* Guarapo en el vaso */}
+                <path d="M118 140 L112 255 Q112 275 130 275 L190 275 Q208 275 208 255 L202 140 Z" fill="#D9A441" opacity="0.6"/>
+                <path d="M118 140 L202 140" stroke="#D9A441" strokeWidth="2" opacity="0.8"/>
+                {/* Burbujas */}
+                <circle cx="145" cy="200" r="4" fill="#FFF8EE" opacity="0.6"/>
+                <circle cx="170" cy="220" r="3" fill="#FFF8EE" opacity="0.5"/>
+                <circle cx="155" cy="180" r="3.5" fill="#FFF8EE" opacity="0.5"/>
+                <circle cx="180" cy="195" r="2.5" fill="#FFF8EE" opacity="0.4"/>
+                {/* Cañas de azúcar */}
+                <rect x="60" y="40" width="12" height="220" rx="6" fill="#7A4B2A" opacity="0.7"/>
+                <rect x="60" y="80" width="12" height="3" fill="#5E3A20" opacity="0.5"/>
+                <rect x="60" y="130" width="12" height="3" fill="#5E3A20" opacity="0.5"/>
+                <rect x="60" y="180" width="12" height="3" fill="#5E3A20" opacity="0.5"/>
+                {/* Hojas de caña */}
+                <path d="M72 50 Q95 30 90 60 Q85 45 72 50" fill="#6B8E4E" opacity="0.7"/>
+                <path d="M60 65 Q35 45 40 75 Q45 60 60 65" fill="#6B8E4E" opacity="0.6"/>
+                <path d="M72 40 Q100 20 95 55" stroke="#6B8E4E" strokeWidth="1.5" fill="none" opacity="0.5"/>
+                {/* Segunda caña */}
+                <rect x="245" y="60" width="10" height="200" rx="5" fill="#7A4B2A" opacity="0.5"/>
+                <rect x="245" y="100" width="10" height="3" fill="#5E3A20" opacity="0.4"/>
+                <rect x="245" y="150" width="10" height="3" fill="#5E3A20" opacity="0.4"/>
+                <path d="M255 70 Q280 50 275 80 Q270 65 255 70" fill="#6B8E4E" opacity="0.5"/>
+                {/* Rodaja de limón */}
+                <circle cx="225" cy="120" r="22" fill="#E8D44D" opacity="0.8"/>
+                <circle cx="225" cy="120" r="16" fill="#F5EDA6" opacity="0.6"/>
+                <line x1="225" y1="104" x2="225" y2="136" stroke="#E8D44D" strokeWidth="1" opacity="0.5"/>
+                <line x1="209" y1="120" x2="241" y2="120" stroke="#E8D44D" strokeWidth="1" opacity="0.5"/>
+                {/* Gotitas frescas */}
+                <path d="M130 90 Q132 82 134 90 Q132 94 130 90" fill="#87CEEB" opacity="0.5"/>
+                <path d="M185 95 Q187 87 189 95 Q187 99 185 95" fill="#87CEEB" opacity="0.4"/>
+              </svg>
             </div>
           </div>
           {/* Decorative elements */}
           <div className="absolute -bottom-1 left-0 right-0 h-16 bg-gradient-to-t from-bg to-transparent" />
-        </section>
-
-        {/* Beneficios */}
-        <section id="beneficios" className="py-20">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-4">
-              ¿Por qué GuarapoFresco?
-            </h2>
-            <p className="text-center text-text-light mb-12 max-w-xl mx-auto">
-              No es guarapo cualquiera. Es guarapo hecho para ti, en el momento justo.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {beneficios.map((b) => (
-                <div
-                  key={b.titulo}
-                  className="bg-white rounded-2xl p-6 shadow-sm border border-primary/5 hover:shadow-md transition-shadow"
-                >
-                  <div className="text-4xl mb-4">{b.icon}</div>
-                  <h3 className="text-lg font-bold text-primary mb-2">{b.titulo}</h3>
-                  <p className="text-text-light text-sm leading-relaxed">{b.descripcion}</p>
-                </div>
-              ))}
-            </div>
-          </div>
         </section>
 
         {/* Catálogo */}
@@ -205,7 +253,7 @@ export default function Home() {
             <p className="text-center text-text-light mb-12 max-w-xl mx-auto">
               Guarapo fresco de caña, sin conservantes, sin azúcar añadida. Escoge tu favorito.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {productos.map((p) => (
                 <div
                   key={p.nombre}
@@ -216,6 +264,7 @@ export default function Home() {
                       {p.tag}
                     </span>
                   )}
+                  {p.ilustracion}
                   <h3 className="text-xl font-bold text-primary mb-2">{p.nombre}</h3>
                   <p className="text-text-light text-sm mb-4 flex-1">{p.descripcion}</p>
                   <div className="flex items-end justify-between mt-auto">
@@ -240,48 +289,24 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Promo Lanzamiento */}
-        <section className="py-8 bg-secondary">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="p-6 text-center">
-              <span className="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-4">
-                Oferta de Lanzamiento
-              </span>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                2 botellas de 500 ml por COP $22.000
-              </h3>
-              <p className="text-white/80 mb-6">
-                Comparte o guarda para después. Precio especial por tiempo limitado.
-              </p>
-              <a
-                href={`https://wa.me/0000000000?text=${encodeURIComponent("Hola, quiero pedir la promo: 2 botellas de 500 ml por $22.000 COP")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-8 py-3 bg-white text-primary font-semibold rounded-full hover:bg-bg transition-colors"
-              >
-                Pedir promo por WhatsApp
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Cómo funciona */}
-        <section id="como-funciona" className="py-20">
+        {/* Por qué GuarapoFresco */}
+        <section id="beneficios" className="py-20">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-4">
-              ¿Cómo funciona?
+              ¿Por qué GuarapoFresco?
             </h2>
             <p className="text-center text-text-light mb-12 max-w-xl mx-auto">
-              Pedir tu guarapo fresco es muy sencillo. Solo 3 pasos.
+              No es guarapo cualquiera. Es guarapo hecho para ti, en el momento justo.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-              {pasos.map((p) => (
-                <div key={p.numero} className="text-center">
-                  <div className="w-14 h-14 bg-primary text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-4">
-                    {p.numero}
-                  </div>
-                  <h3 className="text-lg font-bold text-primary mb-2">{p.titulo}</h3>
-                  <p className="text-text-light text-sm">{p.descripcion}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {beneficios.map((b) => (
+                <div
+                  key={b.titulo}
+                  className="bg-white rounded-2xl p-6 shadow-sm border border-primary/5 hover:shadow-md transition-shadow"
+                >
+                  <div className="text-4xl mb-4">{b.icon}</div>
+                  <h3 className="text-lg font-bold text-primary mb-2">{b.titulo}</h3>
+                  <p className="text-text-light text-sm leading-relaxed">{b.descripcion}</p>
                 </div>
               ))}
             </div>
@@ -295,7 +320,7 @@ export default function Home() {
               Entrega en zonas seleccionadas de Bogotá
             </h2>
             <p className="text-text-light mb-8 max-w-xl mx-auto">
-              Valida tu cobertura antes del pago. Estas son algunas de nuestras zonas de entrega:
+              Confirma tu cobertura por WhatsApp antes de pagar. Estas son algunas de nuestras zonas de entrega:
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-8 max-w-2xl mx-auto">
               {["Chapinero", "Teusaquillo", "Parkway", "Quinta Camacho", "Usaquén", "Cedritos"].map((barrio) => (
@@ -364,31 +389,25 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Ocasión de consumo */}
-        <section className="py-20">
-          <div className="max-w-6xl mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Para cada momento
+        {/* Cómo pedir */}
+        <section id="como-funciona" className="py-20 bg-bg-warm">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-4">
+              ¿Cómo pedir?
             </h2>
-            <p className="text-text-light mb-12 max-w-xl mx-auto">
-              Guarapo fresco ideal para cualquier ocasión.
+            <p className="text-center text-text-light mb-12 max-w-xl mx-auto">
+              Pedir tu guarapo fresco es muy sencillo. Solo 3 pasos.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="bg-white rounded-2xl p-6 shadow-sm border border-primary/5">
-                <div className="text-4xl mb-4">🏠</div>
-                <h3 className="text-lg font-bold text-primary mb-2">En casa</h3>
-                <p className="text-text-light text-sm">Disfruta un guarapo fresco y natural sin salir de tu hogar.</p>
-              </div>
-              <div className="bg-white rounded-2xl p-6 shadow-sm border border-primary/5">
-                <div className="text-4xl mb-4">💼</div>
-                <h3 className="text-lg font-bold text-primary mb-2">En la oficina</h3>
-                <p className="text-text-light text-sm">Una bebida auténtica para recargar energía durante tu jornada.</p>
-              </div>
-              <div className="bg-white rounded-2xl p-6 shadow-sm border border-primary/5">
-                <div className="text-4xl mb-4">🤝</div>
-                <h3 className="text-lg font-bold text-primary mb-2">Reuniones pequeñas</h3>
-                <p className="text-text-light text-sm">Sorprende a tus invitados con una bebida tradicional y diferente.</p>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+              {pasos.map((p) => (
+                <div key={p.numero} className="text-center">
+                  <div className="w-14 h-14 bg-primary text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-4">
+                    {p.numero}
+                  </div>
+                  <h3 className="text-lg font-bold text-primary mb-2">{p.titulo}</h3>
+                  <p className="text-text-light text-sm">{p.descripcion}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -480,7 +499,15 @@ export default function Home() {
                 Guarapo<span className="text-secondary">Fresco</span>
               </span>
               <p className="text-sm mt-1">Guarapo auténtico, hecho al momento en Bogotá.</p>
-              <p className="text-sm mt-2 text-white/60">Atención local en Bogotá — pedidos y soporte por WhatsApp.</p>
+              <p className="text-sm mt-2 text-white/60">Frescura real de la caña, directo a tu puerta.</p>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 px-6 py-3 bg-secondary text-primary font-semibold rounded-full hover:bg-secondary-light transition-colors"
+              >
+                Pedir por WhatsApp
+              </a>
             </div>
             <div className="flex flex-col gap-3 text-sm">
               <a
@@ -491,11 +518,8 @@ export default function Home() {
               >
                 WhatsApp: Pide aquí
               </a>
-              <span>Tel: +00 000 000 0000</span>
-              <a href="mailto:info@example.com" className="hover:text-white transition-colors">
-                info@example.com
-              </a>
               <span>Bogotá, Colombia</span>
+              <p className="text-white/60 text-xs mt-1">Pedidos y atención local por WhatsApp.</p>
               <div className="flex gap-4 mt-2">
                 <a href="#" className="hover:text-white transition-colors">Instagram</a>
                 <a href="#" className="hover:text-white transition-colors">Facebook</a>
@@ -504,7 +528,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-white/10 text-center text-xs text-white/50">
-            &copy; {new Date().getFullYear()} GuarapoFresco. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} GuarapoFresco. Todos los derechos reservados. Bogotá, Colombia.
           </div>
         </div>
       </footer>
