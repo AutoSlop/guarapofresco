@@ -28,6 +28,12 @@ const productos = [
     precio: "20.000",
     tag: null,
   },
+  {
+    nombre: "Pack para Reuniones",
+    descripcion: "Combo especial para oficinas, reuniones o eventos pequeños. Incluye varias presentaciones.",
+    precio: "45.000",
+    tag: "Ideal grupos",
+  },
 ];
 
 const beneficios = [
@@ -54,9 +60,9 @@ const beneficios = [
 ];
 
 const pasos = [
-  { numero: "1", titulo: "Valida cobertura", descripcion: "Confirma que llegamos a tu barrio en Bogotá antes de pedir." },
-  { numero: "2", titulo: "Preparamos al momento", descripcion: "Tu guarapo se hace fresco cuando confirmas tu pedido por WhatsApp." },
-  { numero: "3", titulo: "Entregamos frío y rápido", descripcion: "Lo llevamos sellado y refrigerado directo a tu puerta." },
+  { numero: "1", titulo: "Elige tu presentación", descripcion: "Escoge entre vaso, botella o pack. Tenemos opciones para todos los gustos." },
+  { numero: "2", titulo: "Validamos cobertura", descripcion: "Confirma que llegamos a tu barrio en Bogotá antes de hacer tu pedido." },
+  { numero: "3", titulo: "Preparamos y entregamos", descripcion: "Tu guarapo se prepara al momento y te lo llevamos frío y rápido a tu puerta." },
 ];
 
 const testimonios = [
@@ -118,7 +124,7 @@ export default function Home() {
             <a href="#productos" className="hover:text-primary transition-colors">Productos</a>
             <a href="#como-funciona" className="hover:text-primary transition-colors">Cómo funciona</a>
             <a href="#cobertura" className="hover:text-primary transition-colors">Cobertura</a>
-            <a href="#confianza" className="hover:text-primary transition-colors">Confianza</a>
+            <a href="#confianza" className="hover:text-primary transition-colors">Conservación</a>
             <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
           </nav>
           <a
@@ -201,7 +207,7 @@ export default function Home() {
             <p className="text-center text-text-light mb-12 max-w-xl mx-auto">
               Guarapo fresco de caña, sin conservantes, sin azúcar añadida. Escoge tu favorito.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {productos.map((p) => (
                 <div
                   key={p.nombre}
@@ -227,7 +233,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-colors"
                     >
-                      Pedir por WhatsApp
+                      Pedir ahora
                     </a>
                   </div>
                 </div>
@@ -237,23 +243,23 @@ export default function Home() {
         </section>
 
         {/* Promo Lanzamiento */}
-        <section className="py-12">
+        <section className="py-8 bg-secondary">
           <div className="max-w-4xl mx-auto px-4">
-            <div className="bg-secondary/15 border border-secondary/30 rounded-2xl p-8 text-center">
-              <span className="inline-block px-3 py-1 bg-secondary text-white text-xs font-bold rounded-full mb-4">
-                Promo Lanzamiento
+            <div className="p-6 text-center">
+              <span className="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-4">
+                Oferta de Lanzamiento
               </span>
-              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-2">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
                 2 botellas de 500 ml por COP $22.000
               </h3>
-              <p className="text-text-light mb-6">
+              <p className="text-white/80 mb-6">
                 Comparte o guarda para después. Precio especial por tiempo limitado.
               </p>
               <a
                 href={`https://wa.me/0000000000?text=${encodeURIComponent("Hola, quiero pedir la promo: 2 botellas de 500 ml por $22.000 COP")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition-colors"
+                className="inline-block px-8 py-3 bg-white text-primary font-semibold rounded-full hover:bg-bg transition-colors"
               >
                 Pedir promo por WhatsApp
               </a>
@@ -288,10 +294,10 @@ export default function Home() {
         <section id="cobertura" className="py-20 bg-bg-warm">
           <div className="max-w-6xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              ¿Llegamos a tu barrio?
+              Entrega en zonas seleccionadas de Bogotá
             </h2>
             <p className="text-text-light mb-8 max-w-xl mx-auto">
-              Nuestros barrios foco de entrega en Bogotá:
+              Valida tu cobertura antes del pago. Estas son algunas de nuestras zonas de entrega:
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-8 max-w-2xl mx-auto">
               {["Chapinero", "Teusaquillo", "Parkway", "Quinta Camacho", "Usaquén", "Cedritos"].map((barrio) => (
@@ -470,14 +476,15 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-primary text-white/80 py-10">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col md:flex-row items-start justify-between gap-8">
             <div>
               <span className="text-xl font-bold text-white">
                 Guarapo<span className="text-secondary">Fresco</span>
               </span>
               <p className="text-sm mt-1">Guarapo auténtico, hecho al momento en Bogotá.</p>
+              <p className="text-sm mt-2 text-white/60">Atención local en Bogotá — pedidos y soporte por WhatsApp.</p>
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-4 text-sm">
+            <div className="flex flex-col gap-3 text-sm">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
@@ -486,12 +493,11 @@ export default function Home() {
               >
                 WhatsApp: Pide aquí
               </a>
-              <span className="hidden sm:inline">·</span>
+              <span>Tel: +00 000 000 0000</span>
               <a href="mailto:info@example.com" className="hover:text-white transition-colors">
                 info@example.com
               </a>
-              <span className="hidden sm:inline">·</span>
-              <span>Entrega local en Bogotá, Colombia</span>
+              <span>123 Main Street, Bogotá, Colombia</span>
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-white/10 text-center text-xs text-white/50">
