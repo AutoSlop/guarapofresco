@@ -152,11 +152,10 @@ export default function Home() {
             Guarapo<span className="text-secondary">Fresco</span>
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-text-light">
+            <a href="#" className="hover:text-primary transition-colors">Inicio</a>
             <a href="#productos" className="hover:text-primary transition-colors">Productos</a>
-            <a href="#como-funciona" className="hover:text-primary transition-colors">Cómo pedir</a>
             <a href="#cobertura" className="hover:text-primary transition-colors">Cobertura</a>
-            <a href="#confianza" className="hover:text-primary transition-colors">Conservación</a>
-            <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
+            <a href="#pedidos" className="hover:text-primary transition-colors">Pedidos</a>
           </nav>
           <a
             href={WHATSAPP_URL}
@@ -499,8 +498,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Final */}
-        <section className="py-20">
+        {/* CTA Final / Pedidos */}
+        <section id="pedidos" className="py-20">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               ¿Listo para probar el mejor guarapo de Bogotá?
