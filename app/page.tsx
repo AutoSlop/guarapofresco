@@ -11,6 +11,12 @@ const productos = [
     tag: null,
   },
   {
+    nombre: "Guarapo con Limón",
+    descripcion: "Guarapo fresco con un toque cítrico de limón natural. Refrescante y auténtico.",
+    precio: "9.000",
+    tag: "Nuevo",
+  },
+  {
     nombre: "Botella 500 ml",
     descripcion: "Guarapo fresco embotellado, perfecto para llevar y disfrutar en cualquier momento.",
     precio: "12.000",
@@ -23,10 +29,10 @@ const productos = [
     tag: null,
   },
   {
-    nombre: "Promo Lanzamiento",
-    descripcion: "2 botellas de 500 ml a precio especial. Comparte o guarda para después.",
-    precio: "22.000",
-    tag: "Oferta",
+    nombre: "Pack para Reuniones",
+    descripcion: "Combo ideal para oficinas, reuniones o eventos pequeños. Consulta cantidades por WhatsApp.",
+    precio: "20.000",
+    tag: "Grupos",
   },
 ];
 
@@ -155,12 +161,10 @@ export default function Home() {
                 Pide tu guarapo hoy
               </a>
               <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#productos"
                 className="px-8 py-4 border-2 border-primary text-primary text-lg font-semibold rounded-full hover:bg-primary hover:text-white transition-colors"
               >
-                Escríbenos por WhatsApp
+                Ver productos
               </a>
             </div>
           </div>
@@ -201,7 +205,7 @@ export default function Home() {
             <p className="text-center text-text-light mb-12 max-w-xl mx-auto">
               Guarapo fresco de caña, sin conservantes, sin azúcar añadida. Escoge tu favorito.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {productos.map((p) => (
                 <div
                   key={p.nombre}
@@ -491,7 +495,12 @@ export default function Home() {
               <a href="mailto:info@example.com" className="hover:text-white transition-colors">
                 info@example.com
               </a>
-              <span>123 Main Street, Bogotá, Colombia</span>
+              <span>Bogotá, Colombia</span>
+              <div className="flex gap-4 mt-2">
+                <a href="#" className="hover:text-white transition-colors">Instagram</a>
+                <a href="#" className="hover:text-white transition-colors">Facebook</a>
+                <a href="#" className="hover:text-white transition-colors">TikTok</a>
+              </div>
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-white/10 text-center text-xs text-white/50">
