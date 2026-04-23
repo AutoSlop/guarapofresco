@@ -156,11 +156,11 @@ export default function Home() {
             Guarapo<span className="text-secondary">Fresco</span>
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-text-light">
+            <a href="#" className="hover:text-primary transition-colors">Inicio</a>
             <a href="#productos" className="hover:text-primary transition-colors">Productos</a>
             <a href="#como-funciona" className="hover:text-primary transition-colors">Cómo funciona</a>
             <a href="#cobertura" className="hover:text-primary transition-colors">Cobertura</a>
-            <a href="#confianza" className="hover:text-primary transition-colors">Conservación</a>
-            <a href="#pedidos" className="hover:text-primary transition-colors">Pedidos</a>
+            <a href="#confianza" className="hover:text-primary transition-colors">Confianza</a>
           </nav>
           <a
             href={WHATSAPP_URL}
@@ -429,7 +429,7 @@ export default function Home() {
               Entrega en zonas seleccionadas de Bogotá
             </h2>
             <p className="text-text-light mb-8 max-w-xl mx-auto">
-              Entrega rápida en zonas seleccionadas. Cupos limitados por día para garantizar frescura. Confirma tu cobertura por WhatsApp antes de pagar.
+              Entrega rápida en zonas seleccionadas. Cupos limitados por día para garantizar frescura. Confirma tu dirección antes de pagar.
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-8 max-w-2xl mx-auto">
               {["Chapinero", "Teusaquillo", "Parkway", "Quinta Camacho", "Usaquén", "Cedritos"].map((barrio) => (
@@ -535,7 +535,7 @@ export default function Home() {
                 Guarapo<span className="text-secondary">Fresco</span>
               </span>
               <p className="text-sm mt-1">Guarapo auténtico, hecho al momento en Bogotá.</p>
-              <p className="text-sm mt-2 text-white/60">La bebida tradicional de la caña, modernizada para ti en Bogotá.</p>
+              <p className="text-sm mt-2 text-white/60">Tradición colombiana, preparada al momento.</p>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
