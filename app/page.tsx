@@ -32,31 +32,31 @@ const productos = [
 
 const beneficios = [
   {
+    icon: "✨",
+    titulo: "Auténtico",
+    descripcion: "Guarapo de caña 100% natural, sin aditivos ni conservantes. Sabor tradicional de verdad.",
+  },
+  {
     icon: "🫗",
-    titulo: "Hecho bajo pedido",
-    descripcion: "Preparamos tu guarapo solo cuando lo pides. Nada almacenado, siempre fresco.",
+    titulo: "Fresco",
+    descripcion: "Preparado bajo pedido para que siempre lo recibas recién hecho y con todo su sabor.",
+  },
+  {
+    icon: "🤝",
+    titulo: "Confiable",
+    descripcion: "Proceso higiénico, empaque sellado y cadena de frío desde la preparación hasta tu puerta.",
   },
   {
     icon: "🚀",
-    titulo: "Entrega rápida",
+    titulo: "Entrega local rápida",
     descripcion: "Recibe tu pedido el mismo día en las zonas con cobertura en Bogotá.",
-  },
-  {
-    icon: "✨",
-    titulo: "Sabor auténtico",
-    descripcion: "Caña de azúcar de calidad, sin aditivos, sin conservantes artificiales.",
-  },
-  {
-    icon: "📦",
-    titulo: "Empaque seguro",
-    descripcion: "Envases sellados y aislados para mantener la frescura hasta tu puerta.",
   },
 ];
 
 const pasos = [
-  { numero: "1", titulo: "Eliges", descripcion: "Escoge tu guarapo favorito del catálogo." },
-  { numero: "2", titulo: "Confirmas cobertura", descripcion: "Verifica que llegamos a tu barrio en Bogotá." },
-  { numero: "3", titulo: "Preparamos y entregamos", descripcion: "Lo preparamos al momento y te lo llevamos rápido, fresco y listo." },
+  { numero: "1", titulo: "Valida cobertura", descripcion: "Confirma que llegamos a tu barrio en Bogotá antes de pedir." },
+  { numero: "2", titulo: "Preparamos al momento", descripcion: "Tu guarapo se hace fresco cuando confirmas tu pedido por WhatsApp." },
+  { numero: "3", titulo: "Entregamos frío y rápido", descripcion: "Lo llevamos sellado y refrigerado directo a tu puerta." },
 ];
 
 const testimonios = [
