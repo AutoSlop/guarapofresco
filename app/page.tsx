@@ -5,16 +5,10 @@ const WHATSAPP_URL =
 
 const productos = [
   {
-    nombre: "Guarapo Tradicional",
+    nombre: "Vaso Individual",
     descripcion: "Guarapo fresco recién preparado, perfecto para disfrutar al momento.",
     precio: "8.000",
     tag: null,
-  },
-  {
-    nombre: "Guarapo con Limón",
-    descripcion: "El clásico guarapo con un toque cítrico refrescante. Ideal para días calurosos.",
-    precio: "12.000",
-    tag: "Nuevo",
   },
   {
     nombre: "Botella 500 ml",
@@ -29,10 +23,10 @@ const productos = [
     tag: null,
   },
   {
-    nombre: "Pack para Reuniones",
-    descripcion: "Combo especial para oficinas, reuniones o eventos pequeños. Incluye varias presentaciones.",
-    precio: "45.000",
-    tag: "Ideal grupos",
+    nombre: "Promo Lanzamiento",
+    descripcion: "2 botellas de 500 ml a precio especial. Comparte o guarda para después.",
+    precio: "22.000",
+    tag: "Oferta",
   },
 ];
 
@@ -207,7 +201,7 @@ export default function Home() {
             <p className="text-center text-text-light mb-12 max-w-xl mx-auto">
               Guarapo fresco de caña, sin conservantes, sin azúcar añadida. Escoge tu favorito.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {productos.map((p) => (
                 <div
                   key={p.nombre}
