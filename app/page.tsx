@@ -69,23 +69,6 @@ const productos = [
       </svg>
     ),
   },
-  {
-    nombre: "Presentación para Reuniones",
-    descripcion: "Combo especial para oficina, reuniones o eventos pequeños. Cotiza tu pedido por WhatsApp.",
-    precio: null,
-    precioLabel: "Cotiza por WhatsApp",
-    tag: null,
-    ilustracion: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
-        <path d="M18 12 L16 52 Q16 56 20 56 L44 56 Q48 56 48 52 L46 12 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
-        <path d="M17.5 24 L16.5 50 Q16.5 54.5 20 54.5 L44 54.5 Q47.5 54.5 47.5 50 L46.5 24 Z" fill="#D9A441" opacity="0.5"/>
-        <circle cx="28" cy="38" r="2" fill="#FFF8EE" opacity="0.6"/>
-        <circle cx="36" cy="42" r="1.5" fill="#FFF8EE" opacity="0.5"/>
-        <circle cx="40" cy="8" r="6" fill="#7A4B2A" opacity="0.2"/>
-        <text x="40" y="11" textAnchor="middle" fill="#7A4B2A" fontSize="8" fontWeight="bold">+</text>
-      </svg>
-    ),
-  },
 ];
 
 const beneficios = [
@@ -112,9 +95,9 @@ const beneficios = [
 ];
 
 const pasos = [
-  { numero: "1", titulo: "Valida cobertura en Bogotá", descripcion: "Confirma tu zona y dirección para asegurar que llegamos a tu puerta." },
-  { numero: "2", titulo: "Hacemos tu guarapo bajo pedido", descripcion: "Preparamos tu guarapo fresco al momento, justo cuando lo confirmas." },
-  { numero: "3", titulo: "Entregamos frío y rápido", descripcion: "Te lo llevamos sellado y frío directo a tu puerta en zonas de cobertura." },
+  { numero: "1", titulo: "Eliges tu presentación", descripcion: "Escoge entre vaso, botella o pack. Lo que mejor se ajuste a tu momento." },
+  { numero: "2", titulo: "Confirmas cobertura en Bogotá", descripcion: "Valida tu zona y dirección para asegurar que llegamos a tu puerta." },
+  { numero: "3", titulo: "Preparamos y entregamos rápido", descripcion: "Hacemos tu guarapo al momento y te lo llevamos sellado y frío." },
 ];
 
 const testimonios = [
@@ -287,7 +270,7 @@ export default function Home() {
             <p className="text-center text-text-light mb-12 max-w-xl mx-auto">
               Guarapo fresco de caña, sin conservantes, sin azúcar añadida. Escoge tu favorito.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {productos.map((p) => (
                 <div
                   key={p.nombre}
