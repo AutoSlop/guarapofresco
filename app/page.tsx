@@ -56,18 +56,18 @@ const productos = [
   },
   {
     nombre: "Pack de Botellas",
-    descripcion: "Promo de lanzamiento: lleva 2 botellas de 500 ml a precio especial.",
+    descripcion: "2 botellas de 500 ml de guarapo fresco. Ideal para compartir en casa o llevar a la oficina.",
     precio: "22.000",
-    precioLabel: "$22.000 COP",
+    precioLabel: "2x500 ml por $22.000 COP",
     tag: "Promo",
     ilustracion: (
       <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
-        <rect x="14" y="8" width="14" height="5" rx="2" fill="#7A4B2A" opacity="0.6"/>
-        <path d="M12 16 Q12 13 16 13 L26 13 Q30 13 30 16 L30 52 Q30 56 26 56 L16 56 Q12 56 12 52 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
-        <path d="M13 26 L13 50 Q13 54.5 16.5 54.5 L25.5 54.5 Q29 54.5 29 50 L29 26 Z" fill="#D9A441" opacity="0.5"/>
-        <rect x="36" y="8" width="14" height="5" rx="2" fill="#7A4B2A" opacity="0.6"/>
-        <path d="M34 16 Q34 13 38 13 L48 13 Q52 13 52 16 L52 52 Q52 56 48 56 L38 56 Q34 56 34 52 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
-        <path d="M35 26 L35 50 Q35 54.5 38.5 54.5 L47.5 54.5 Q51 54.5 51 50 L51 26 Z" fill="#D9A441" opacity="0.5"/>
+        <rect x="12" y="8" width="14" height="5" rx="2" fill="#7A4B2A" opacity="0.6"/>
+        <path d="M10 16 Q10 13 14 13 L24 13 Q28 13 28 16 L28 52 Q28 56 24 56 L14 56 Q10 56 10 52 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="1.5"/>
+        <path d="M11 26 L11 50 Q11 54 14.5 54 L23.5 54 Q27 54 27 50 L27 26 Z" fill="#D9A441" opacity="0.5"/>
+        <rect x="38" y="8" width="14" height="5" rx="2" fill="#7A4B2A" opacity="0.6"/>
+        <path d="M36 16 Q36 13 40 13 L50 13 Q54 13 54 16 L54 52 Q54 56 50 56 L40 56 Q36 56 36 52 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="1.5"/>
+        <path d="M37 26 L37 50 Q37 54 40.5 54 L49.5 54 Q53 54 53 50 L53 26 Z" fill="#D9A441" opacity="0.5"/>
       </svg>
     ),
   },
@@ -101,7 +101,7 @@ const beneficios = [
   },
   {
     icon: "⚡",
-    titulo: "Hecho al momento",
+    titulo: "Recién preparado",
     descripcion: "Preparamos tu pedido cuando lo confirmas. Sin espera, sin guarapo viejo.",
   },
   {
@@ -111,15 +111,15 @@ const beneficios = [
   },
   {
     icon: "📱",
-    titulo: "Compra fácil por WhatsApp",
+    titulo: "Pedido fácil por WhatsApp",
     descripcion: "Haz tu pedido en minutos por WhatsApp. Sin apps, sin registro, sin complicaciones.",
   },
 ];
 
 const pasos = [
-  { numero: "1", titulo: "Valida cobertura", descripcion: "Confirma que tu barrio en Bogotá esté dentro de nuestra zona de entrega." },
-  { numero: "2", titulo: "Hacemos tu pedido al momento", descripcion: "Preparamos tu guarapo fresco en cuanto confirmas. Sin guarapo viejo, sin espera." },
-  { numero: "3", titulo: "Entregamos frío y rápido", descripcion: "Te lo llevamos sellado, frío y listo para disfrutar directo a tu puerta." },
+  { numero: "1", titulo: "Elige tu guarapo", descripcion: "Escoge entre vaso, botella o pack. Revisa nuestro catálogo y elige tu favorito." },
+  { numero: "2", titulo: "Confirma cobertura en Bogotá", descripcion: "Valida que tu barrio esté en nuestra zona de entrega antes de pagar." },
+  { numero: "3", titulo: "Recibe fresco y frío", descripcion: "Hacemos tu guarapo al momento y te lo llevamos sellado, frío y listo para disfrutar." },
 ];
 
 const testimonios = [
@@ -527,8 +527,11 @@ export default function Home() {
             <p className="text-center text-text-light mb-4 max-w-xl mx-auto">
               Haz tu pedido en minutos. Solo escríbenos por WhatsApp con tu producto, dirección y listo.
             </p>
-            <p className="text-center text-secondary font-bold text-lg mb-10">
+            <p className="text-center text-secondary font-bold text-lg mb-2">
               Oferta de lanzamiento: 2 botellas de 500 ml por COP $22.000
+            </p>
+            <p className="text-center text-text-light text-sm mb-10">
+              Cupos limitados por día para garantizar frescura. No te quedes sin el tuyo.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
               {/* Mensaje prellenado */}
@@ -589,6 +592,9 @@ export default function Home() {
               </a>
             </div>
             <div className="flex flex-col gap-3 text-sm">
+              <a href="#productos" className="hover:text-white transition-colors">Productos</a>
+              <a href="#cobertura" className="hover:text-white transition-colors">Cobertura</a>
+              <a href="#confianza" className="hover:text-white transition-colors">Confianza</a>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
@@ -600,11 +606,6 @@ export default function Home() {
               <span>Bogotá, Colombia</span>
               <span>Entrega local en zonas seleccionadas</span>
               <p className="text-white/60 text-xs mt-1">Pedidos y atención directa por WhatsApp.</p>
-              <div className="flex gap-4 mt-2">
-                <a href="#" className="hover:text-white transition-colors">Instagram</a>
-                <a href="#" className="hover:text-white transition-colors">Facebook</a>
-                <a href="#" className="hover:text-white transition-colors">TikTok</a>
-              </div>
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-white/10 text-center text-xs text-white/50">
