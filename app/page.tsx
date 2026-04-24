@@ -39,7 +39,7 @@ const productos = [
     ),
   },
   {
-    nombre: "Botella Personal 500 ml",
+    nombre: "Botella 500 ml",
     descripcion: "Guarapo fresco embotellado, perfecto para llevar y disfrutar en cualquier momento.",
     precio: "12.000",
     precioLabel: "Desde $12.000 COP",
@@ -55,24 +55,25 @@ const productos = [
     ),
   },
   {
-    nombre: "Pack de Botellas",
-    descripcion: "2 botellas de 500 ml de guarapo fresco. Ideal para compartir en casa o llevar a la oficina.",
-    precio: "22.000",
-    precioLabel: "2x500 ml por $22.000 COP",
-    tag: "Promo",
+    nombre: "Botella 1 Litro",
+    descripcion: "La presentación familiar. Guarapo fresco para compartir en casa, oficina o reuniones.",
+    precio: "20.000",
+    precioLabel: "Desde $20.000 COP",
+    tag: "Familiar",
     ilustracion: (
       <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
-        <rect x="12" y="8" width="14" height="5" rx="2" fill="#7A4B2A" opacity="0.6"/>
-        <path d="M10 16 Q10 13 14 13 L24 13 Q28 13 28 16 L28 52 Q28 56 24 56 L14 56 Q10 56 10 52 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="1.5"/>
-        <path d="M11 26 L11 50 Q11 54 14.5 54 L23.5 54 Q27 54 27 50 L27 26 Z" fill="#D9A441" opacity="0.5"/>
-        <rect x="38" y="8" width="14" height="5" rx="2" fill="#7A4B2A" opacity="0.6"/>
-        <path d="M36 16 Q36 13 40 13 L50 13 Q54 13 54 16 L54 52 Q54 56 50 56 L40 56 Q36 56 36 52 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="1.5"/>
-        <path d="M37 26 L37 50 Q37 54 40.5 54 L49.5 54 Q53 54 53 50 L53 26 Z" fill="#D9A441" opacity="0.5"/>
+        <rect x="22" y="4" width="20" height="8" rx="3" fill="#7A4B2A" opacity="0.7"/>
+        <path d="M18 16 Q18 12 24 12 L40 12 Q46 12 46 16 L46 56 Q46 60 40 60 L24 60 Q18 60 18 56 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
+        <path d="M20 28 L20 54 Q20 58 24.5 58 L39.5 58 Q44 58 44 54 L44 28 Z" fill="#D9A441" opacity="0.5"/>
+        <circle cx="30" cy="42" r="2" fill="#FFF8EE" opacity="0.5"/>
+        <circle cx="36" cy="48" r="1.5" fill="#FFF8EE" opacity="0.4"/>
+        <rect x="23" y="34" width="18" height="14" rx="3" fill="#7A4B2A" opacity="0.1"/>
+        <text x="32" y="43" textAnchor="middle" fill="#7A4B2A" fontSize="6" fontWeight="bold" opacity="0.4">1L</text>
       </svg>
     ),
   },
   {
-    nombre: "Presentación para Reuniones",
+    nombre: "Pack para Reuniones",
     descripcion: "Guarapo para oficinas, reuniones y eventos pequeños. Cotiza tu combo a medida.",
     precio: "",
     precioLabel: "Cotiza por WhatsApp",
@@ -202,8 +203,8 @@ export default function Home() {
             <div className="flex-1">
               <div className="flex flex-wrap gap-2 mb-6">
                 <span className="inline-block px-4 py-1.5 bg-secondary/15 text-secondary text-sm font-semibold rounded-full">Hecho bajo pedido</span>
-                <span className="inline-block px-4 py-1.5 bg-secondary/15 text-secondary text-sm font-semibold rounded-full">Entrega local rápida</span>
-                <span className="inline-block px-4 py-1.5 bg-secondary/15 text-secondary text-sm font-semibold rounded-full">Sabor tradicional</span>
+                <span className="inline-block px-4 py-1.5 bg-secondary/15 text-secondary text-sm font-semibold rounded-full">Entrega rápida en Bogotá</span>
+                <span className="inline-block px-4 py-1.5 bg-secondary/15 text-secondary text-sm font-semibold rounded-full">Producto fresco y sellado</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-primary leading-tight max-w-4xl">
                 Guarapo fresco hecho al momento y entregado en Bogotá
@@ -229,7 +230,7 @@ export default function Home() {
               </div>
             </div>
             {/* Ilustración decorativa de caña y guarapo */}
-            <div className="hidden md:flex flex-shrink-0 items-center justify-center w-72 h-72 lg:w-80 lg:h-80">
+            <div className="flex flex-shrink-0 items-center justify-center w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 mx-auto md:mx-0">
               <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-lg">
                 {/* Botella grande (izquierda) */}
                 <rect x="68" y="52" width="28" height="10" rx="3" fill="#7A4B2A" opacity="0.7"/>
@@ -419,19 +420,19 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-primary mb-4">Ingredientes y preparación</h3>
                 <ul className="space-y-3 text-text-light">
                   <li className="flex items-start gap-3">
-                    <span className="text-secondary font-bold mt-0.5">&#10003;</span>
+                    <span className="text-xl mt-0.5">🌿</span>
                     <span>Caña de azúcar de calidad, seleccionada cuidadosamente.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-secondary font-bold mt-0.5">&#10003;</span>
+                    <span className="text-xl mt-0.5">🍃</span>
                     <span>100% natural: sin conservantes, colorantes ni azúcar añadida.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-secondary font-bold mt-0.5">&#10003;</span>
+                    <span className="text-xl mt-0.5">🔥</span>
                     <span>Preparación bajo pedido: tu guarapo se hace cuando lo pides.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-secondary font-bold mt-0.5">&#10003;</span>
+                    <span className="text-xl mt-0.5">✨</span>
                     <span>Proceso higiénico y controlado en cada paso.</span>
                   </li>
                 </ul>
@@ -440,19 +441,19 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-primary mb-4">Cadena de frío y conservación</h3>
                 <ul className="space-y-3 text-text-light">
                   <li className="flex items-start gap-3">
-                    <span className="text-secondary font-bold mt-0.5">&#10003;</span>
+                    <span className="text-xl mt-0.5">📦</span>
                     <span>Empaque térmico que mantiene la temperatura durante el envío.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-secondary font-bold mt-0.5">&#10003;</span>
+                    <span className="text-xl mt-0.5">🔒</span>
                     <span>Envases sellados para preservar frescura y sabor.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-secondary font-bold mt-0.5">&#10003;</span>
+                    <span className="text-xl mt-0.5">❄️</span>
                     <span>Mantener refrigerado al recibir.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-secondary font-bold mt-0.5">&#10003;</span>
+                    <span className="text-xl mt-0.5">⏰</span>
                     <span className="font-semibold">Consumir preferiblemente el mismo día para disfrutar el mejor sabor.</span>
                   </li>
                 </ul>
