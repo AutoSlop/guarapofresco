@@ -7,7 +7,13 @@ const COVERED_BARRIOS = [
   "usaquén",
   "usaquen",
   "teusaquillo",
+  "parkway",
+  "quinta camacho",
+  "cedritos",
   "suba",
+];
+
+const EXTENDED_BARRIOS = [
   "engativá",
   "engativa",
   "fontibón",
@@ -27,25 +33,22 @@ const COVERED_BARRIOS = [
   "rosales",
   "la macarena",
   "la soledad",
-  "parkway",
   "galerías",
   "galerias",
   "modelia",
-  "cedritos",
   "country",
   "santa bárbara",
   "santa barbara",
   "la cabrera",
   "el nogal",
   "el retiro",
-  "quinta camacho",
   "la perseverancia",
   "palermo",
   "nicolás de federmán",
   "nicolas de federman",
 ];
 
-type CoverageStatus = "idle" | "covered" | "check";
+type CoverageStatus = "idle" | "covered" | "extended" | "outside";
 
 export default function CoverageChecker() {
   const [barrio, setBarrio] = useState("");
@@ -57,7 +60,14 @@ export default function CoverageChecker() {
     const isCovered = COVERED_BARRIOS.some(
       (b) => normalized.includes(b) || b.includes(normalized)
     );
-    setStatus(isCovered ? "covered" : "check");
+    if (isCovered) {
+      setStatus("covered");
+      return;
+    }
+    const isExtended = EXTENDED_BARRIOS.some(
+      (b) => normalized.includes(b) || b.includes(normalized)
+    );
+    setStatus(isExtended ? "extended" : "outside");
   }
 
   return (
@@ -93,13 +103,13 @@ export default function CoverageChecker() {
         </div>
       )}
 
-      {status === "check" && (
+      {status === "extended" && (
         <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-2xl text-center">
           <span className="text-amber-700 font-semibold text-lg">
-            &#9888; Zona en revisión
+            &#9888; Zona extendida
           </span>
           <p className="text-amber-600 text-sm mt-1">
-            Escríbenos por WhatsApp para confirmar si llegamos a tu barrio.
+            Tu barrio está en zona extendida. Escríbenos por WhatsApp para confirmar disponibilidad y tiempos de entrega.
           </p>
           <a
             href="https://wa.me/0000000000?text=Hola%2C%20quiero%20saber%20si%20tienen%20cobertura%20en%20mi%20zona"
@@ -108,6 +118,25 @@ export default function CoverageChecker() {
             className="inline-block mt-3 px-5 py-2 bg-secondary text-text font-semibold rounded-full hover:bg-secondary-light transition-colors"
           >
             Consultar por WhatsApp
+          </a>
+        </div>
+      )}
+
+      {status === "outside" && (
+        <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-2xl text-center">
+          <span className="text-red-700 font-semibold text-lg">
+            &#10007; Fuera de cobertura
+          </span>
+          <p className="text-red-600 text-sm mt-1">
+            Por ahora no llegamos a tu zona, pero estamos creciendo. Escríbenos y te avisamos cuando ampliemos cobertura.
+          </p>
+          <a
+            href="https://wa.me/0000000000?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20cu%C3%A1ndo%20tendr%C3%A1n%20cobertura%20en%20mi%20zona"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-3 px-5 py-2 bg-secondary text-text font-semibold rounded-full hover:bg-secondary-light transition-colors"
+          >
+            Avisarme cuando lleguen
           </a>
         </div>
       )}

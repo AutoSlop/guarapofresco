@@ -1,6 +1,7 @@
 import CoverageChecker from "./components/CoverageChecker";
 import ContactForm from "./components/ContactForm";
 
+
 const WHATSAPP_URL =
   "https://wa.me/0000000000?text=Hola%2C%20quiero%20pedir%20guarapo%20fresco";
 
@@ -326,6 +327,24 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Beneficios */}
+        <section className="py-20">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
+              ¿Por qué GuarapoFresco?
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {beneficios.map((b) => (
+                <div key={b.titulo} className="bg-white rounded-2xl p-6 border border-primary/5 text-center">
+                  <span className="text-3xl mb-4 block">{b.icon}</span>
+                  <h3 className="text-lg font-bold text-primary mb-2">{b.titulo}</h3>
+                  <p className="text-text-light text-sm">{b.descripcion}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Promo Lanzamiento */}
         <section className="py-6 bg-primary">
           <div className="max-w-6xl mx-auto px-4 text-center">
@@ -366,27 +385,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Por qué GuarapoFresco */}
-        <section id="beneficios" className="py-20 bg-bg-warm">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-4">
-              ¿Por qué GuarapoFresco?
+        {/* Cobertura */}
+        <section id="cobertura" className="py-20 bg-bg-warm">
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Entrega en zonas seleccionadas de Bogotá
             </h2>
-            <p className="text-center text-text-light mb-12 max-w-xl mx-auto">
-              No es guarapo cualquiera. Es guarapo hecho para ti, en el momento justo.
+            <p className="text-text-light mb-8 max-w-xl mx-auto">
+              Entrega rápida en zonas seleccionadas. Cupos limitados por día para garantizar frescura. Confirma tu dirección antes de pagar.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {beneficios.map((b) => (
-                <div
-                  key={b.titulo}
-                  className="bg-white rounded-2xl p-6 shadow-sm border border-primary/5 hover:shadow-md transition-shadow"
-                >
-                  <div className="text-4xl mb-4">{b.icon}</div>
-                  <h3 className="text-lg font-bold text-primary mb-2">{b.titulo}</h3>
-                  <p className="text-text-light text-sm leading-relaxed">{b.descripcion}</p>
-                </div>
+            <div className="flex flex-wrap justify-center gap-3 mb-8 max-w-2xl mx-auto">
+              {["Chapinero", "Teusaquillo", "Parkway", "Quinta Camacho", "Usaquén", "Cedritos", "Suba"].map((barrio) => (
+                <span key={barrio} className="px-4 py-2 bg-white border border-primary/10 rounded-full text-primary font-semibold text-sm">
+                  {barrio}
+                </span>
               ))}
             </div>
+            <p className="text-text-light text-sm mb-8">
+              Valida tu cobertura antes de hacer tu pedido:
+            </p>
+            <CoverageChecker />
           </div>
         </section>
 
@@ -440,29 +458,6 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Cobertura */}
-        <section id="cobertura" className="py-20 bg-bg-warm">
-          <div className="max-w-6xl mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Entrega en zonas seleccionadas de Bogotá
-            </h2>
-            <p className="text-text-light mb-8 max-w-xl mx-auto">
-              Entrega rápida en zonas seleccionadas. Cupos limitados por día para garantizar frescura. Confirma tu dirección antes de pagar.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3 mb-8 max-w-2xl mx-auto">
-              {["Chapinero", "Teusaquillo", "Parkway", "Quinta Camacho", "Usaquén", "Cedritos"].map((barrio) => (
-                <span key={barrio} className="px-4 py-2 bg-white border border-primary/10 rounded-full text-primary font-semibold text-sm">
-                  {barrio}
-                </span>
-              ))}
-            </div>
-            <p className="text-text-light text-sm mb-8">
-              Valida tu cobertura antes de hacer tu pedido:
-            </p>
-            <CoverageChecker />
           </div>
         </section>
 
@@ -562,8 +557,20 @@ export default function Home() {
         </section>
       </main>
 
+      {/* Sticky mobile CTA */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-bg/95 backdrop-blur-md border-t border-primary/10 px-4 py-3">
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full text-center px-6 py-3 bg-primary text-white text-base font-bold rounded-full shadow-lg shadow-primary/20"
+        >
+          Pide tu guarapo hoy
+        </a>
+      </div>
+
       {/* Footer */}
-      <footer className="bg-primary text-white/80 py-10">
+      <footer className="bg-primary text-white/80 py-10 pb-24 md:pb-10">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start justify-between gap-8">
             <div>
