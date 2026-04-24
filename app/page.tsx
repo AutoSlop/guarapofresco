@@ -7,7 +7,7 @@ const WHATSAPP_URL =
 
 const productos = [
   {
-    nombre: "Guarapo Tradicional",
+    nombre: "Vaso Individual",
     descripcion: "Guarapo fresco recién preparado, perfecto para disfrutar al momento. Puro sabor de caña.",
     precio: "8.000",
     precioLabel: "Desde $8.000 COP",
@@ -18,23 +18,6 @@ const productos = [
         <path d="M17.5 24 L16.5 50 Q16.5 54.5 20 54.5 L44 54.5 Q47.5 54.5 47.5 50 L46.5 24 Z" fill="#D9A441" opacity="0.5"/>
         <circle cx="28" cy="38" r="2" fill="#FFF8EE" opacity="0.6"/>
         <circle cx="36" cy="42" r="1.5" fill="#FFF8EE" opacity="0.5"/>
-      </svg>
-    ),
-  },
-  {
-    nombre: "Guarapo con Limón",
-    descripcion: "El mismo guarapo auténtico con un toque cítrico refrescante. Ideal para los días calurosos.",
-    precio: "9.000",
-    precioLabel: "Desde $9.000 COP",
-    tag: null,
-    ilustracion: (
-      <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
-        <path d="M18 12 L16 52 Q16 56 20 56 L44 56 Q48 56 48 52 L46 12 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="2"/>
-        <path d="M17.5 24 L16.5 50 Q16.5 54.5 20 54.5 L44 54.5 Q47.5 54.5 47.5 50 L46.5 24 Z" fill="#D9A441" opacity="0.5"/>
-        <circle cx="28" cy="38" r="2" fill="#FFF8EE" opacity="0.6"/>
-        <circle cx="36" cy="42" r="1.5" fill="#FFF8EE" opacity="0.5"/>
-        <circle cx="38" cy="8" r="6" fill="#E8D44D" opacity="0.75"/>
-        <circle cx="38" cy="8" r="4" fill="#F5EDA6" opacity="0.55"/>
       </svg>
     ),
   },
@@ -73,22 +56,19 @@ const productos = [
     ),
   },
   {
-    nombre: "Pack para Reuniones",
-    descripcion: "Guarapo para oficinas, reuniones y eventos pequeños. Cotiza tu combo a medida.",
-    precio: "",
-    precioLabel: "Cotiza por WhatsApp",
-    tag: "Eventos",
+    nombre: "Promo Lanzamiento",
+    descripcion: "2 botellas de 500 ml de guarapo fresco. Aprovecha esta oferta especial de lanzamiento.",
+    precio: "22.000",
+    precioLabel: "$22.000 COP",
+    tag: "Promo",
     ilustracion: (
       <svg viewBox="0 0 64 64" fill="none" className="w-14 h-14 mb-3">
-        <rect x="6" y="10" width="12" height="4" rx="2" fill="#7A4B2A" opacity="0.6"/>
-        <path d="M4 18 Q4 14 8 14 L16 14 Q20 14 20 18 L20 50 Q20 54 16 54 L8 54 Q4 54 4 50 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="1.5"/>
-        <path d="M5 26 L5 48 Q5 52 8.5 52 L15.5 52 Q19 52 19 48 L19 26 Z" fill="#D9A441" opacity="0.5"/>
-        <rect x="26" y="10" width="12" height="4" rx="2" fill="#7A4B2A" opacity="0.6"/>
-        <path d="M24 18 Q24 14 28 14 L36 14 Q40 14 40 18 L40 50 Q40 54 36 54 L28 54 Q24 54 24 50 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="1.5"/>
-        <path d="M25 26 L25 48 Q25 52 28.5 52 L35.5 52 Q39 52 39 48 L39 26 Z" fill="#D9A441" opacity="0.5"/>
-        <rect x="46" y="10" width="12" height="4" rx="2" fill="#7A4B2A" opacity="0.6"/>
-        <path d="M44 18 Q44 14 48 14 L56 14 Q60 14 60 18 L60 50 Q60 54 56 54 L48 54 Q44 54 44 50 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="1.5"/>
-        <path d="M45 26 L45 48 Q45 52 48.5 52 L55.5 52 Q59 52 59 48 L59 26 Z" fill="#D9A441" opacity="0.5"/>
+        <rect x="8" y="10" width="12" height="4" rx="2" fill="#7A4B2A" opacity="0.6"/>
+        <path d="M6 18 Q6 14 10 14 L18 14 Q22 14 22 18 L22 50 Q22 54 18 54 L10 54 Q6 54 6 50 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="1.5"/>
+        <path d="M7 26 L7 48 Q7 52 10.5 52 L17.5 52 Q21 52 21 48 L21 26 Z" fill="#D9A441" opacity="0.5"/>
+        <rect x="36" y="10" width="12" height="4" rx="2" fill="#7A4B2A" opacity="0.6"/>
+        <path d="M34 18 Q34 14 38 14 L46 14 Q50 14 50 18 L50 50 Q50 54 46 54 L38 54 Q34 54 34 50 Z" fill="#FFF8EE" stroke="#7A4B2A" strokeWidth="1.5"/>
+        <path d="M35 26 L35 48 Q35 52 38.5 52 L45.5 52 Q49 52 49 48 L49 26 Z" fill="#D9A441" opacity="0.5"/>
       </svg>
     ),
   },
@@ -161,11 +141,6 @@ const faqs = [
     pregunta: "¿Cómo conservo el guarapo?",
     respuesta:
       "Mantén tu guarapo refrigerado y consúmelo preferiblemente el mismo día de la entrega para disfrutar su máximo sabor y frescura. Una vez abierto, consume dentro de las siguientes 4 horas.",
-  },
-  {
-    pregunta: "¿Puedo hacer pedidos para reuniones o eventos?",
-    respuesta:
-      "¡Claro! Hacemos pedidos especiales para reuniones, oficinas y eventos pequeños. Escríbenos por WhatsApp con la cantidad de personas y te armamos un combo a medida.",
   },
 ];
 
@@ -293,7 +268,7 @@ export default function Home() {
             <p className="text-center text-text-light mb-12 max-w-xl mx-auto">
               Guarapo fresco de caña, sin conservantes, sin azúcar añadida. Escoge tu favorito.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {productos.map((p) => (
                 <div
                   key={p.nombre}
